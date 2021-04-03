@@ -1,10 +1,8 @@
-import './App.css';
+import "./App.css";
+// test Denis Kravchuk
 
 function App() {
-  return (
-    <>
-      </>
-  );
+  return <></>;
 }
 
 export default App;
