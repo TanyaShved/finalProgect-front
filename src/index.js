@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
 import "modern-normalize/modern-normalize.css";
 import "./index.css";
+import './css/common.css';
 import App from "./App";
 
 ReactDOM.render(
@@ -18,5 +19,5 @@ ReactDOM.render(
       </PersistGate>
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
