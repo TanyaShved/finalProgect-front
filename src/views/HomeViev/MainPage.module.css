@@ -1,0 +1,75 @@
+.section {
+  padding: 30px 0px 33px;
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.66;
+  text-align: center;
+}
+
+.line {
+  display: block;
+  margin: 20px auto;
+  border-bottom: 1px solid #00122f;
+  width: 50%;
+}
+
+/* .text::after {
+  content: '';
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+  margin: 20px 0px;
+
+  height: 1px;
+  background: #00122f;
+} */
+
+.authorInfo {
+  padding-bottom: 40px;
+}
+
+.author {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.authorBio {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 60px 38px 94px;
+  width: 100%;
+  height: 212px;
+
+  color: var(--btn-text-color-primary);
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+
+  text-decoration: none;
+  text-align: center;
+}
+
+.button.first {
+  background-color: var(--btn-bg-color-other);
+  margin-bottom: 20px;
+}
+
+.button.second {
+  background-color: var(--btn-bg-color-primary);
+}
