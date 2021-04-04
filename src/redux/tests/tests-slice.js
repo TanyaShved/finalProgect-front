@@ -3,7 +3,7 @@ import testsOperations from "./tests-operations";
 import { authOperations } from "../auth";
 
 const initialState = {
-  tests: [],
+  questions: [],
   results: [],
 };
 
@@ -12,14 +12,14 @@ const testsSlice = createSlice({
   initialState,
   extraReducers: {
     [testsOperations.fetchTests.fulfilled](state, action) {
-      state.tests = action.payload;
+      state.questions = action.payload;
     },
     [testsOperations.postAnswers.fulfilled](state, action) {
-      state.tests = [];
+      state.questions = [];
       state.payload = action.payload;
     },
     [authOperations.logOut.fulfilled](state, action) {
-      state.tests = [];
+      state.questions = [];
       state.payload = [];
     },
   },
