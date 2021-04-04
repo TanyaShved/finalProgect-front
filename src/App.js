@@ -1,5 +1,4 @@
-import "./App.css";
-// test Denis Kravchuk
+import './App.css';
 
 function App() {
   return <></>;
