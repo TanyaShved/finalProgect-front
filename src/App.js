@@ -1,21 +1,31 @@
-import React, { Suspense } from 'react';
-import { Switch } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-// import AppBar from './components/AppBar';
 import Container from './components/Container';
-// import PrivateRoute from 'components/PrivateRoute';
-// import PublicRoute from 'components/PublicRoute';
-
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
+
+// import AppBar from './components/AppBar';
+const MainPage = lazy(() =>
+  import(
+    '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
+  ),
+);
+// import PrivateRoute from 'components/PrivateRoute';
+// import PublicRoute from 'components/PublicRoute';
 
 function App() {
   return (
     <Container>
       {/* <AppBar /> */}
-      <Switch>
-        <Suspense fallback={<Loader />}></Suspense>
-      </Switch>
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route path="/" exact>
+            <MainPage />
+          </Route>
+        </Switch>
+      </Suspense>
+
       <ToastContainer />
     </Container>
   );
