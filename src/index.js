@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'modern-normalize/modern-normalize.css';
 import './index.css';
-import './views/css/common.css';
+import './css/common.css';
 import App from './App';
 
 ReactDOM.render(
