@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Container from './components/Container';
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
+import ResultView from './views/ResultsView';
 
 // import AppBar from './components/AppBar';
 const MainPage = lazy(() =>
@@ -22,6 +23,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <MainPage />
+          </Route>
+          <Route path="/results" exact>
+            <ResultView />
           </Route>
         </Switch>
       </Suspense>
