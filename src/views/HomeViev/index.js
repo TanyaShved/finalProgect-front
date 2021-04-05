@@ -1,1 +1,1 @@
-export { default } from './HomeViev';
+export { default } from './MainPage';
