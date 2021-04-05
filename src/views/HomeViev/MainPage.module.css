@@ -1,38 +1,46 @@
 .section {
   padding: 30px 0px 33px;
-  margin: 0 auto;
-  max-width: 280px;
+  text-align: center;
 }
 
 .text {
+  margin: 0 auto;
+  width: 280px;
+
   font-size: 12px;
   font-weight: 700;
   line-height: 1.66;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .text {
+    width: 650px;
+  }
+}
+
 .line {
   display: block;
   margin: 20px auto;
   border-bottom: 1px solid #00122f;
-  width: 50%;
+  width: 130px;
 }
 
-/* .text::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 50%;
-  margin: 20px 0px;
-
-  height: 1px;
-  background: #00122f;
-} */
+@media screen and (min-width: 768px) {
+  .line {
+    width: 322px;
+  }
+}
 
 .authorInfo {
-  padding-bottom: 40px;
+  margin: 0px auto 40px;
+  width: 280px;
+}
+
+@media screen and (min-width: 768px) {
+  .authorInfo {
+    width: 400px;
+  }
 }
 
 .author {
@@ -52,7 +60,7 @@
 .button {
   display: inline-block;
   padding: 60px 38px 94px;
-  width: 100%;
+  width: 280px;
   height: 212px;
 
   color: var(--btn-text-color-primary);
@@ -65,6 +73,13 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .button {
+    width: 400px;
+    padding: 60px 80px 78px;
+  }
+}
+
 .button.first {
   background-color: var(--btn-bg-color-other);
   margin-bottom: 20px;
@@ -72,4 +87,14 @@
 
 .button.second {
   background-color: var(--btn-bg-color-primary);
+}
+
+.icon {
+  display: block;
+  margin: auto;
+  height: 24px;
+  width: 24px;
+  margin-top: 12px;
+
+  background-image: url('../../images/arrow.svg');
 }
