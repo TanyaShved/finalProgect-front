@@ -1,0 +1,60 @@
+.pageNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 70px;
+}
+
+.logo {
+  display: block;
+  /* margin-left: 20px; */
+  width: 129px;
+  height: 28px;
+  /* fill: $text-header-color; */
+  /* @include transition; */
+}
+
+.navigationMenu {
+  display: flex;
+  /* height: 70px; */
+  /* text-align: center; */
+  /* align-items: center; */
+}
+
+.burgerMenu {
+  display: block;
+  width: 20px;
+  height: 20px;
+  /* fill: $text-header-color; */
+  /* @include transition; */
+}
+
+.close {
+  display: none;
+  width: 26px;
+  height: 26px;
+  /* fill: $text-header-color; */
+  /* @include transition; */
+}
+/* .burgerMenu:focus .close {
+  display: block;
+}
+.logo:hover .close {
+  display: block;
+} */
+
+/* .burgerMenu:focus {
+  fill: #f38181;
+} */
+/* .close:hover {
+  display: block;
+}
+
+.close:hover .burger_menu {
+  display: none;
+} */
+
+/* .burgerMenu:hover {
+  display: none;
+} */

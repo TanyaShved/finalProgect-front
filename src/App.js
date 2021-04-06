@@ -5,7 +5,7 @@ import Container from './components/Container';
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 
-// import AppBar from './components/AppBar';
+import AppBar from './components/AppBar';
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
@@ -17,7 +17,7 @@ const MainPage = lazy(() =>
 function App() {
   return (
     <Container>
-      {/* <AppBar /> */}
+      <AppBar />
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/" exact>
