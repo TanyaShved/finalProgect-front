@@ -1,16 +1,20 @@
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
 
-// import s from './UserMenu.module.scss';
+import s from './AuthMenu.module.css';
 
 // TO DO
 // 1. Добавиль NavLink's на контакты;
 // 2. Прикрутить рауты;
 
-export default function UserMenu() {
+export default function AuthMenu() {
   return (
-    <div>
-      <a href="#">contacts</a>
-    </div>
+    <ul className={s.menuWrapper}>
+      <li className={s.menuItem}>
+        <a href="#" className={s.menuLink}>
+          Contacts
+        </a>
+      </li>
+    </ul>
   );
 }

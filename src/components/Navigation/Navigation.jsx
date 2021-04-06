@@ -40,20 +40,36 @@ export default function Navigation() {
         </svg>
       </NavLink> */}
 
-      <div className={s.navigationMenu}>
-        <div>
-          <svg className={s.burgerMenu}>
-            <use href={sprite + '#burger-menu'}></use>
-          </svg>
-          <svg className={s.close}>
-            <use href={sprite + '#close'}></use>
-          </svg>
+      <div className={s.navigationMenuWrapper}>
+        <div className={s.btnControls}>
+          <span className={s.btnBurgerMenu}>
+            <svg className={s.burgerMenuIcon}>
+              <use href={sprite + '#burger-menu'}></use>
+            </svg>
+          </span>
+          <span className={s.btnClose}>
+            <svg className={s.closeIcon}>
+              <use href={sprite + '#close'}></use>
+            </svg>
+          </span>
         </div>
 
-        {/* <UserMenu /> */}
-        {/* <AuthMenu /> */}
+        {/* <div className={s.btnControls}>
+          <button type="button" className={s.btnBurgerMenu}>
+            <svg className={s.burgerMenuIcon}>
+              <use href={sprite + '#burger-menu'}></use>
+            </svg>
+          </button>
+          <button type="button" className={s.btnClose}>
+            <svg className={s.closeIcon}>
+              <use href={sprite + '#close'}></use>
+            </svg>
+          </button>
+        </div> */}
 
-        {!isAuthenticated ? <AuthMenu /> : <UserMenu />}
+        <div className={s.navigationMenu}>
+          {!isAuthenticated ? <AuthMenu /> : <UserMenu />}
+        </div>
       </div>
     </nav>
   );

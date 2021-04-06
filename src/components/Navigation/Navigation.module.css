@@ -11,50 +11,76 @@
   /* margin-left: 20px; */
   width: 129px;
   height: 28px;
-  /* fill: $text-header-color; */
-  /* @include transition; */
+  cursor: pointer;
 }
 
-.navigationMenu {
+.navigationMenuWrapper {
   display: flex;
-  /* height: 70px; */
-  /* text-align: center; */
-  /* align-items: center; */
 }
 
-.burgerMenu {
+.btnControls {
+  display: flex;
+  align-items: center;
+}
+
+.btnBurgerMenu,
+.btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 70px;
+
+  cursor: pointer;
+
+  background-color: var(--bg-color-primary);
+  border: none;
+
+  border-left: 1px solid #e2e3e5;
+}
+
+.burgerMenuIcon {
   display: block;
   width: 20px;
   height: 20px;
-  /* fill: $text-header-color; */
-  /* @include transition; */
 }
 
-.close {
-  display: none;
+.closeIcon {
+  display: block;
   width: 26px;
   height: 26px;
-  /* fill: $text-header-color; */
-  /* @include transition; */
-}
-/* .burgerMenu:focus .close {
-  display: block;
-}
-.logo:hover .close {
-  display: block;
-} */
-
-/* .burgerMenu:focus {
-  fill: #f38181;
-} */
-/* .close:hover {
-  display: block;
 }
 
-.close:hover .burger_menu {
+.btnClose {
   display: none;
-} */
+}
 
-/* .burgerMenu:hover {
+.navigationMenuWrapper:hover .btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationMenuWrapper:hover .btnBurgerMenu {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navigationMenu {
+    display: none;
+  }
+
+  .navigationMenuWrapper:hover .navigationMenu {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btnControls {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width: 1280px) {
+  
 } */
