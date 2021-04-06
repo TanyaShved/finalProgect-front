@@ -1,6 +1,5 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
-
 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 28" id="logo">
 <g clip-path="url(#clip0)">
     <path d="M129 0H0V28H129V0Z" stroke="#121D2E"/>
@@ -13,7 +12,7 @@
         <rect width="129" height="28" fill="white"/>
     </clipPath>
 </defs>
-</symbol>
+</symbol> 
 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="sign-out">
 <g clip-path="url(#clip0)" fill="#000">
     <path d="M12.646 4.646l-.707.708L14.087 7.5H7v1h7.086l-2.146 2.146.707.707L16 8l-3.354-3.354z"></path>
@@ -27,11 +26,10 @@
 </symbol>
 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="burger-menu">
 <path d="M2.5 15h15v-1.667h-15V15zm0-4.167h15V9.167h-15v1.666zM2.5 5v1.667h15V5h-15z" fill="#000"></path>
-</symbol>
+</symbol> 
 <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" id="close">
 <path d="M20.583 6.944l-1.527-1.527L13 11.473 6.944 5.417 5.417 6.944 11.471 13l-6.055 6.056 1.527 1.527L13 14.528l6.056 6.055 1.527-1.527L14.527 13l6.056-6.056z" fill="#000"></path>
 </symbol>
-
 <symbol id="icon-arrow" viewBox="0 0 32 32">
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M29.817 9.558l-9.375-9.375c-0.113-0.113-0.269-0.183-0.442-0.183-0.345 0-0.625 0.28-0.625 0.625 0 0.173 0.070 0.329 0.183 0.442l8.308 8.308h-27.24c-0.345 0-0.625 0.28-0.625 0.625s0.28 0.625 0.625 0.625v0h27.24l-8.308 8.308c-0.113 0.113-0.183 0.269-0.183 0.442 0 0.345 0.28 0.625 0.625 0.625 0.173 0 0.329-0.070 0.442-0.183v0l9.375-9.375c0.113-0.113 0.183-0.269 0.183-0.442s-0.070-0.329-0.183-0.442v0z"></path>
 </symbol>
