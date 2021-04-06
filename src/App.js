@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import TestView from './views/TestView';
+import UsefulInfoView from './views/UsefulInfoView';
 import ResultView from './views/ResultsView';
 import NotFoundView from './views/NotFoundView';
 
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route path="/test">
               <TestView />
+            </Route>
+            <Route path="/useful-info">
+              <UsefulInfoView />
             </Route>
             <Route path="/results" exact>
               <ResultView />
