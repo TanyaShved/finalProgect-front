@@ -1,0 +1,13 @@
+.section {
+  /* display: flex; */
+  text-align: center;
+}
+
+h1 {
+  display: block;
+}
+
+.img {
+  display: block;
+  margin: auto;
+}
