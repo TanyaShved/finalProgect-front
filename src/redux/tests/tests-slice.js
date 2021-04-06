@@ -1,14 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
-import testsOperations from "./tests-operations";
-import { authOperations } from "../auth";
+import { createSlice } from '@reduxjs/toolkit';
+import testsOperations from './tests-operations';
+import { authOperations } from '../auth';
+import tests from '../../tests.json';
 
 const initialState = {
-  questions: [],
+  questions: tests,
   results: [],
 };
 
 const testsSlice = createSlice({
-  name: "tests",
+  name: 'tests',
   initialState,
   extraReducers: {
     [testsOperations.fetchTests.fulfilled](state, action) {
