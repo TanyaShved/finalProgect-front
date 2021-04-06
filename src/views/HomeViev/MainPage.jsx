@@ -2,9 +2,7 @@ import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import '../../css/common.css';
 import style from './MainPage.module.css';
-
-// import TestPageView from '../HomeViev';
-// import NotFoundView from '../HomeViev';
+import TestPageView from '../TestView';
 
 function MainPage() {
   return (
@@ -36,9 +34,8 @@ function MainPage() {
 
       <Switch>
         {/* підключити компонент TestPageView */}
-        <Route exact path="/test" component={'TestPageView'} />
+        <Route exact path="/test" component={TestPageView} />
         {/* підключити компонент 404 NotFoundView */}
-        <Route component={'NotFoundView'} />
       </Switch>
     </section>
   );
