@@ -5,6 +5,7 @@ import Container from './components/Container';
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 import ResultView from './views/ResultsView';
+import Footer from './components/Footer';
 
 // import AppBar from './components/AppBar';
 const MainPage = lazy(() =>
@@ -17,21 +18,25 @@ const MainPage = lazy(() =>
 
 function App() {
   return (
-    <Container>
-      {/* <AppBar /> */}
-      <Suspense fallback={<Loader />}>
-        <Switch>
-          <Route path="/" exact>
-            <MainPage />
-          </Route>
-          <Route path="/results" exact>
-            <ResultView />
-          </Route>
-        </Switch>
-      </Suspense>
+    <>
+      <Container>
+        {/* <AppBar /> */}
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route path="/" exact>
+              <MainPage />
+            </Route>
+            <Route path="/results" exact>
+              <ResultView />
+            </Route>
+          </Switch>
+        </Suspense>
 
-      <ToastContainer />
-    </Container>
+        <ToastContainer />
+      </Container>
+
+      <Footer />
+    </>
   );
 }
 export default App;
