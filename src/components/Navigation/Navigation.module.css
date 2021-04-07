@@ -1,0 +1,76 @@
+.pageNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigationMenuWrapper {
+  display: flex;
+}
+
+.btnControls {
+  display: flex;
+  align-items: center;
+}
+
+.btnBurgerMenu,
+.btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 70px;
+
+  cursor: pointer;
+
+  background-color: var(--bg-color-primary);
+  border: none;
+
+  border-left: 1px solid #e2e3e5;
+}
+
+.burgerMenuIcon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.closeIcon {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
+.btnClose {
+  display: none;
+}
+
+.navigationMenuWrapper:hover .btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationMenuWrapper:hover .btnBurgerMenu {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .navigationMenu {
+    display: none;
+  }
+
+  .navigationMenuWrapper:hover .navigationMenu {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btnControls {
+    display: none;
+  }
+}
+
+/* @media screen and (min-width: 1280px) {
+  
+} */

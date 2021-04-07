@@ -1,0 +1,179 @@
+:root {
+  --bg-color-primary: #f5f6fb;
+  --bg-color-secondary: #02172a;
+
+  --text-color-primary: #000000;
+  --text-color-secondary: rgba(255, 255, 255, 0.4);
+  --text-color-third: #ff6b09;
+  --text-color-other: #555555;
+
+  --btn-text-color-primary: #ffffff;
+  --btn-text-color-secondary: #000000;
+  --btn-bg-color-primary: #ff6b09;
+  --btn-bg-color-secondary: #ffffff;
+  --btn-bg-color-other: #02172a;
+
+  --btn-border-color: #ced2d1;
+}
+
+/* * {
+  outline: 1px solid green;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0px;
+  padding: 5px 10px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+/* Title */
+.title {
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.16;
+
+  color: var(--text-color-primary);
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 12px;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title {
+    font-size: 22px;
+  }
+} */
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  min-width: 202px;
+
+  background-color: var(--btn-bg-color-primary);
+  color: var(--btn-text-color-primary);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--btn-bg-color-primary);
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    font-size: 10px;
+  }
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--btn-text-color-primary);
+}
+
+.btn.secondary {
+  color: var(--btn-text-color-secondary);
+  background-color: var(--btn-bg-color-secondary);
+  border: 1px solid var(--btn-border-color);
+}
+
+.btn.secondary:hover,
+.btn.secondary:focus {
+  color: var(--btn-text-color-secondary);
+}
