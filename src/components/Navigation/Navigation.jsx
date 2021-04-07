@@ -12,9 +12,6 @@ import sprite from '../../images/sprite.svg';
 import s from './Navigation.module.css';
 
 // TO DO
-// 1. Добавиль NavLink's на лого и вынести в отдельный компонент;
-// 2. Прикрутить рауты;
-// 3. Заменить svg на svg в NavLink;
 // 4. Убрать временные переменные и их значения.
 
 export default function Navigation() {
