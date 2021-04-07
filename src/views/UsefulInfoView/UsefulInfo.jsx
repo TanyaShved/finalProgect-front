@@ -5,31 +5,34 @@ import style from './UsefulInfo.module.css';
 function UsefulInfo() {
   return (
     <section className={style.section}>
-      <ul>
-        <li>
-          <h2>Полезная литература</h2>
-          <ul>
-            <li>Тестирование dot.com Савин.</li>
-            <li>Психбольница в руках пациентов.</li>
-            <li>Scrum. Дж. Сазерленд.</li>
-          </ul>
+      <ul className={style.articles}>
+        <li className={style.articl}>
+          <h2>Useful literature</h2>
+          <span className={style.line}></span>
+          <ol className={style.numList}>
+            <li>Testing dot.com Savin.</li>
+            <li>A mental hospital in the hands of patients.</li>
+            <li>Scrum. J. Sutherland.</li>
+          </ol>
         </li>
-        <li>
-          <h2>Полезные ресурсы</h2>
-          <ul>
+
+        <li className={style.articl}>
+          <h2>Useful resources</h2>
+          <span className={style.line}></span>
+          <ol className={style.numList}>
             <li>
-              <a href="#">dou.ua</a>
+              <a href="https://dou.ua/">dou.ua</a>
             </li>
             <li>
-              <a href="#">Habr</a>
+              <a href="https://habr.com/">Habr</a>
             </li>
             <li>
-              <a href="#">facebook.com/QA</a>
+              <a href="https://www.facebook.com/">facebook.com/QA</a>
             </li>
             <li>
-              <a href="#">goit.ua</a>
+              <a href="https://goit.ua/">goit.ua</a>
             </li>
-          </ul>
+          </ol>
         </li>
       </ul>
     </section>
