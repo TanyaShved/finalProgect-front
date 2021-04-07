@@ -11,6 +11,21 @@ const initialState = {
 const testsSlice = createSlice({
   name: 'tests',
   initialState,
+
+  reducers: {
+    addResult(state, { payload }) {
+      const index = state.results.findIndex(
+        result => result.questionId === payload.questionId,
+      );
+
+      if (index !== -1) {
+        state.results[index].answer = payload.answer;
+      } else {
+        state.results.push(payload);
+      }
+    },
+  },
+
   extraReducers: {
     [testsOperations.fetchTests.fulfilled](state, action) {
       state.questions = action.payload;
@@ -26,4 +41,5 @@ const testsSlice = createSlice({
   },
 });
 
+export const { addResult } = testsSlice.actions;
 export default testsSlice.reducer;
