@@ -1,0 +1,13 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  /* position: absolute; */
+  /* left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%; */
+
+  border: 1px solid #e2e3e5;
+}
