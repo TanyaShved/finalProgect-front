@@ -19,13 +19,15 @@ function MainPage() {
       <ul className={style.list}>
         <li>
           <Link to="/test" className={style.button + ' ' + style.first}>
-            Техническая подготовка QA
+            QA technical
+            <br /> training
             <p className={style.icon}></p>
           </Link>
         </li>
         <li>
           <Link to="/test" className={style.button + ' ' + style.second}>
-            Теория тестирования
+            Testing
+            <br /> theory
             <p className={style.icon}></p>
           </Link>
         </li>
