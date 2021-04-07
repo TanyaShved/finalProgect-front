@@ -2,16 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  height: 70px;
-}
-
-.logo {
-  display: block;
-  /* margin-left: 20px; */
-  width: 129px;
-  height: 28px;
-  cursor: pointer;
 }
 
 .navigationMenuWrapper {

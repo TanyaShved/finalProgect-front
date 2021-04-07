@@ -16,6 +16,11 @@ const MainPage = lazy(() =>
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
+const AuthPage = lazy(() =>
+  import(
+    './views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */
+  ),
+);
 
 // import PrivateRoute from 'components/PrivateRoute';
 // import PublicRoute from 'components/PublicRoute';
@@ -27,14 +32,17 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/" exact>
+    
             <Container>
               <MainPage />
             </Container>
           </Route>
+    
           <Route path="/test">
             <Container>
               <TestView />
             </Container>
+    
           </Route>
           <Route path="/useful-info">
             <UsefulInfoView />

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 31px;
+  background-color: white;
+}
+
+.input {
+  width: 240px;
+  max-height: 56px;
+  margin-bottom: 20px;
+  padding: 21px 25px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #bbbbbb;
+  border: 1px solid #ced2d1;
+  outline: none;
+}
+
+.input:focus {
+  transform: scale(1.01);
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.list {
+  display: flex;
+}
+
+.item:not(:last-child) {
+  margin-right: 20px;
+}

@@ -1,0 +1,10 @@
+.button {
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.01);
+}

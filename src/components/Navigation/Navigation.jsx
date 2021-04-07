@@ -12,9 +12,6 @@ import sprite from '../../images/sprite.svg';
 import s from './Navigation.module.css';
 
 // TO DO
-// 1. Добавиль NavLink's на лого;
-// 2. Прикрутить рауты;
-// 3. Заменить svg на svg в NavLink;
 // 4. Убрать временные переменные и их значения.
 
 export default function Navigation() {
@@ -24,22 +21,6 @@ export default function Navigation() {
 
   return (
     <nav className={s.pageNavigation}>
-      <svg className={s.logo}>
-        <use href={sprite + '#logo'}></use>
-      </svg>
-
-      {/* <NavLink
-        className={s.logo}
-        activeClassName={s.logo_active}
-        to={Home.path}
-        key={Home.label}
-        exact={Home.exact}
-      >
-        <svg className={s.logo}>
-          <use href={sprite + '#logo'}></use>
-        </svg>
-      </NavLink> */}
-
       <div className={s.navigationMenuWrapper}>
         <div className={s.btnControls}>
           <span className={s.btnBurgerMenu}>
