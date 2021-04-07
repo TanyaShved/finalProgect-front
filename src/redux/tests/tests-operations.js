@@ -1,8 +1,8 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const fetchTests = createAsyncThunk(
-  "questions/fetchTests",
+  'questions/fetchTests',
   async (testUrl, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(`/test/${testUrl}`);
@@ -10,11 +10,11 @@ const fetchTests = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
 );
 
 const postAnswers = createAsyncThunk(
-  "questions/postAnswers",
+  'questions/postAnswers',
   async (testUrl, answers, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(`/test/${testUrl}`, answers);
@@ -22,8 +22,20 @@ const postAnswers = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
 );
+
+// const setResults = createAsyncThunk(
+//   'results/setResults',
+//   async (questionId, answer, { rejectWithValue }) => {
+//     try {
+//       const { data } = await axios.post(`/test/${testUrl}`, answers);
+//       return data;
+//     } catch (error) {
+//       return rejectWithValue(error);
+//     }
+//   },
+// );
 
 const operations = {
   fetchTests,
