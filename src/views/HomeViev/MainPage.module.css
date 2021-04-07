@@ -59,9 +59,16 @@
   text-align: center;
 }
 
+@media screen and (min-width: 1280px) {
+  .list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .button {
   display: inline-block;
-  padding: 60px 38px 94px;
+  padding: 60px 0px 95px;
   width: 280px;
   height: 212px;
 
@@ -78,7 +85,13 @@
 @media screen and (min-width: 768px) {
   .button {
     width: 400px;
-    padding: 60px 80px 78px;
+    padding: 60px 0px 75px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .button {
+    margin: 0px 10px;
   }
 }
 
