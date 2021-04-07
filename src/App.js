@@ -15,6 +15,11 @@ const MainPage = lazy(() =>
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
+const AuthPage = lazy(() =>
+  import(
+    './views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */
+  ),
+);
 
 // import PrivateRoute from 'components/PrivateRoute';
 // import PublicRoute from 'components/PublicRoute';
@@ -29,6 +34,11 @@ function App() {
             <Route path="/" exact>
               <MainPage />
             </Route>
+
+            <Route path="/auth" exact>
+              <AuthPage />
+            </Route>
+            
             <Route path="/test">
               <TestView />
             </Route>
