@@ -1,20 +1,19 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../css/common.css';
 import style from './MainPage.module.css';
-import TestPageView from '../TestView';
 
 function MainPage() {
   return (
     <section className={style.section}>
       <p className={style.text}>
-        “Регрессионное тестирование. Что это? Если система компилируется, то это
-        хорошо, если загружается, то это просто здорово!”
+        “Regression testing. What is it? <br /> If the system compiles, that's
+        good, if it boots, that's great!”
       </p>
       <span className={style.line}></span>
       <div className={style.authorInfo}>
-        <p className={style.author}>Линус Торвальдс</p>
-        <p className={style.authorBio}>Финский программист, хакер, 1969 г.</p>
+        <p className={style.author}>Linus Torvalds</p>
+        <p className={style.authorBio}>Linux kernel creator, hacker, 1969</p>
       </div>
 
       <ul className={style.list}>
@@ -31,12 +30,6 @@ function MainPage() {
           </Link>
         </li>
       </ul>
-
-      <Switch>
-        {/* підключити компонент TestPageView */}
-        <Route exact path="/test" component={TestPageView} />
-        {/* підключити компонент 404 NotFoundView */}
-      </Switch>
     </section>
   );
 }
