@@ -2,6 +2,8 @@ import React from 'react';
 import Container from '../../components/Container';
 import Diagramm from '../../components/Diagramm';
 
+import s from './ResultView.module.css';
+
 export default function ResultView() {
   const correctAnswers = 9;
   const totalAnswers = 12;
@@ -33,16 +35,29 @@ export default function ResultView() {
 
   return (
     <Container>
-      <h1>Results</h1>
+      <h1 className={s.title}>Results</h1>
       {/* переменная с именем теста */}
-      <p>[TESTING THEORY_]</p>
-      <Diagramm />
-      <span>{`Correct answers - ${correctAnswers}`}</span>
-      <span>{`Total answers - ${totalAnswers}`}</span>
+      <p className={s.subTitle}>[TESTING THEORY_]</p>
+      <span className={s.line}></span>
+      <div className={s.diagramm}>
+        <Diagramm />
+      </div>
+      <div className={s.answers}>
+        <p className={s.answersText}>
+          Correct answers -{' '}
+          <span className={s.answerNumber}>{correctAnswers}</span>
+        </p>
+        <span className={s.verticalLine}></span>
+        <p className={s.answersText}>
+          Total answers - <span className={s.answerNumber}>{totalAnswers}</span>
+        </p>
+      </div>
       <div className="catImage"></div>
       <h2>{mainText}</h2>
       <p>{secondaryText}</p>
-      <button>Try again</button>
+      <button className="btn" type="button">
+        Try again
+      </button>
     </Container>
   );
 }

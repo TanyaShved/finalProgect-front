@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+}
+.title {
+  margin-top: 40px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2.5;
+}
+.subTitle {
+  /* margin-top: 12px; */
+  font-size: 10px;
+  line-height: 1.2;
+}
+.line {
+  display: block;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-bottom: 1px solid #00122f;
+  opacity: 0.15;
+  width: 130px;
+}
+.diagramm {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+.answers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.answersText {
+  font-size: 10px;
+  line-height: 1.2;
+}
+.answerNumber {
+  font-weight: 700;
+}
+.verticalLine {
+  display: block;
+  border-left: 1px solid #00122f;
+  opacity: 0.15;
+  height: 20px;
+}
