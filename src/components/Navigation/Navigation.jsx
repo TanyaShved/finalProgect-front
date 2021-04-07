@@ -24,22 +24,6 @@ export default function Navigation() {
 
   return (
     <nav className={s.pageNavigation}>
-      {/* <svg className={s.logo}>
-        <use href={sprite + '#logo'}></use>
-      </svg> */}
-
-      {/* <NavLink
-        className={s.logo}
-        activeClassName={s.logo_active}
-        to={Home.path}
-        key={Home.label}
-        exact={Home.exact}
-      >
-        <svg className={s.logo}>
-          <use href={sprite + '#logo'}></use>
-        </svg>
-      </NavLink> */}
-
       <div className={s.navigationMenuWrapper}>
         <div className={s.btnControls}>
           <span className={s.btnBurgerMenu}>
