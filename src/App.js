@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import TestView from './views/TestView';
+import UsefulInfoView from './views/UsefulInfoView';
 import ResultView from './views/ResultsView';
 import NotFoundView from './views/NotFoundView';
 
@@ -27,30 +28,37 @@ const AuthPage = lazy(() =>
 function App() {
   return (
     <>
-      <Container>
-        <AppBar />
-        <Suspense fallback={<Loader />}>
-          <Switch>
-            <Route path="/" exact>
+      <AppBar />
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route path="/" exact>
+    
+            <Container>
               <MainPage />
-            </Route>
-
-            <Route path="/auth" exact>
-              <AuthPage />
-            </Route>
-            
-            <Route path="/test">
+            </Container>
+          </Route>
+    
+          <Route path="/test">
+            <Container>
               <TestView />
-            </Route>
-            <Route path="/results" exact>
+            </Container>
+    
+          </Route>
+          <Route path="/useful-info">
+            <UsefulInfoView />
+          </Route>
+          <Route path="/results" exact>
+            <Container>
               <ResultView />
-            </Route>
+            </Container>
+          </Route>
+          <Container>
             <Route component={NotFoundView} />
-          </Switch>
-        </Suspense>
+          </Container>
+        </Switch>
+      </Suspense>
 
-        <ToastContainer />
-      </Container>
+      <ToastContainer />
 
       <Footer />
     </>
