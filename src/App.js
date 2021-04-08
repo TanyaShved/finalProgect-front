@@ -11,13 +11,20 @@ import UsefulInfoView from './views/UsefulInfoView';
 import ResultView from './views/ResultsView';
 import NotFoundView from './views/NotFoundView';
 
+const AuthPage = lazy(() =>
+  import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+);
+
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
-const AuthPage = lazy(() =>
-  import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+
+const ContactsPage = lazy(() =>
+  import(
+    '../src/views/ContactsView/ContactsPage.jsx' /* webpackChunkName: "contacts-page" */
+  ),
 );
 
 // import PrivateRoute from 'components/PrivateRoute';
@@ -44,6 +51,12 @@ function App() {
 
           <Route path="/useful-info">
             <UsefulInfoView />
+          </Route>
+
+          <Route path="/contacts">
+            <Container>
+              <ContactsPage />
+            </Container>
           </Route>
 
           <Route path="/results" exact>
