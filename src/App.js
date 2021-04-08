@@ -33,7 +33,9 @@ const ContactsPage = lazy(() =>
 function App() {
   return (
     <>
-      <AppBar />
+      <Container>
+        <AppBar />
+      </Container>
 
       <Suspense fallback={<Loader />}>
         <Switch>
