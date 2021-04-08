@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/common.css';
 import style from './MainPage.module.css';
+import sprite from '../../images/sprite.svg';
 
 function MainPage() {
   return (
@@ -21,14 +22,18 @@ function MainPage() {
           <Link to="/test" className={style.button + ' ' + style.first}>
             QA technical
             <br /> training
-            <p className={style.icon}></p>
+            <svg className={style.icon}>
+              <use href={sprite + '#icon-arrow'}></use>
+            </svg>
           </Link>
         </li>
         <li>
           <Link to="/test" className={style.button + ' ' + style.second}>
             Testing
             <br /> theory
-            <p className={style.icon}></p>
+            <svg className={style.icon}>
+              <use href={sprite + '#icon-arrow'}></use>
+            </svg>
           </Link>
         </li>
       </ul>
