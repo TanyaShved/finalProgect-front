@@ -17,9 +17,7 @@ const MainPage = lazy(() =>
   ),
 );
 const AuthPage = lazy(() =>
-  import(
-    './views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */
-  ),
+  import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
 );
 
 // import PrivateRoute from 'components/PrivateRoute';
@@ -29,29 +27,31 @@ function App() {
   return (
     <>
       <AppBar />
+
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/" exact>
-    
             <Container>
               <MainPage />
             </Container>
           </Route>
-    
+
           <Route path="/test">
             <Container>
               <TestView />
             </Container>
-    
           </Route>
+
           <Route path="/useful-info">
             <UsefulInfoView />
           </Route>
+
           <Route path="/results" exact>
             <Container>
               <ResultView />
             </Container>
           </Route>
+
           <Container>
             <Route component={NotFoundView} />
           </Container>
@@ -59,7 +59,6 @@ function App() {
       </Suspense>
 
       <ToastContainer />
-
       <Footer />
     </>
   );
