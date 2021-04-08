@@ -8,7 +8,6 @@ import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
-import ResultView from './views/ResultsView';
 import NotFoundView from './views/NotFoundView';
 
 const MainPage = lazy(() =>
@@ -18,6 +17,9 @@ const MainPage = lazy(() =>
 );
 const AuthPage = lazy(() =>
   import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+);
+const ResultView = lazy(() =>
+  import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
 
 // import PrivateRoute from 'components/PrivateRoute';

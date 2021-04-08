@@ -1,6 +1,8 @@
 import React from 'react';
 import Container from '../../components/Container';
 import Diagramm from '../../components/Diagramm';
+import notBadCat from '../../images/not_bad_cat.png';
+import badCat from '../../images/bad_cat.png';
 
 import s from './ResultView.module.css';
 
@@ -22,15 +24,19 @@ export default function ResultView() {
 
   let mainText = '';
   let secondaryText = '';
+  let catImage = null;
   if (mark === 5) {
     mainText = 'Excellent!!!';
     secondaryText = 'You are the best of the best of the best!';
+    catImage = notBadCat;
   } else if (mark === 3) {
     mainText = 'Not bad!';
     secondaryText = 'But you still need to learn some materials.';
+    catImage = notBadCat;
   } else if (mark === 2) {
     mainText = 'Bad!';
     secondaryText = 'You need to learn materials again.';
+    catImage = badCat;
   }
 
   return (
@@ -52,10 +58,12 @@ export default function ResultView() {
           Total answers - <span className={s.answerNumber}>{totalAnswers}</span>
         </p>
       </div>
-      <div className="catImage"></div>
-      <h2>{mainText}</h2>
-      <p>{secondaryText}</p>
-      <button className="btn" type="button">
+
+      <img className={s.resultImage} src={catImage} alt="Cat" />
+
+      <h2 className={s.resultTitle}>{mainText}</h2>
+      <p className={s.resultText}>{secondaryText}</p>
+      <button className={s.button} type="button">
         Try again
       </button>
     </Container>
