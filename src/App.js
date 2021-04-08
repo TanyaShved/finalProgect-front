@@ -52,7 +52,9 @@ function App() {
           </Route>
 
           <Route path="/useful-info">
-            <UsefulInfoView />
+            <Container>
+              <UsefulInfoView />
+            </Container>
           </Route>
 
           <Route path="/contacts">
