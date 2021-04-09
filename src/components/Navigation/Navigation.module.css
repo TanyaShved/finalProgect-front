@@ -1,32 +1,55 @@
 .pageNavigation {
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 320px;
+  height: 70px;
+  border: 1px solid #e2e3e5;
+}
+
+.logo {
+  display: block;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 .navigationMenuWrapper {
   display: flex;
 }
 
-.btnControls {
+/* .btnControls {
   display: flex;
   align-items: center;
-}
+} */
 
 .btnBurgerMenu,
 .btnClose {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* width: 56px;
+  height: 70px; */
+
+  cursor: pointer;
+  border-left: 1px solid #e2e3e5;
+}
+
+.btnClose {
+  position: fixed;
+  z-index: 10;
+  left: calc(50% + 102px);
+  /* right: 57px; */
+  background-color: var(--bg-color-primary);
+}
+
+.openNavigationMenu,
+.closeNavigationMenu {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 56px;
-  height: 70px;
-
-  cursor: pointer;
-
-  background-color: var(--bg-color-primary);
-  border: none;
-
-  border-left: 1px solid #e2e3e5;
+  height: 69px;
 }
 
 .burgerMenuIcon {
@@ -41,36 +64,63 @@
   height: 26px;
 }
 
-.btnClose {
+/* .btnClose {
   display: none;
-}
-
-.navigationMenuWrapper:hover .btnClose {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navigationMenuWrapper:hover .btnBurgerMenu {
-  display: none;
-}
+} */
 
 @media screen and (max-width: 767px) {
-  .navigationMenu {
+  /* .navigationMenu {
     display: none;
+  } */
+
+  .navigationMenu {
+    /* position: relative; */
+    opacity: 0;
+    transition: opacity 200ms linear;
+    pointer-events: none;
   }
 
-  .navigationMenuWrapper:hover .navigationMenu {
-    display: block;
+  .navigationMenu:target {
+    opacity: 1;
+    pointer-events: auto;
   }
+
+  /* .navigationMenu:target .btnBurgerMenu {
+    display: none;
+  } */
+
+  /* .navigationMenuWrapper:hover .btnClose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  /* .navigationMenuWrapper:hover .btnBurgerMenu {
+    display: none;
+  } */
+
+  /* .navigationMenuWrapper:hover .navigationMenu {
+    display: block;
+  } */
 }
 
 @media screen and (min-width: 768px) {
-  .btnControls {
+  .pageNavigation {
+    width: 768px;
+  }
+
+  .navigationMenuWrapper {
+    margin-right: 20px;
+  }
+
+  .btnBurgerMenu,
+  .btnClose {
     display: none;
   }
 }
 
-/* @media screen and (min-width: 1280px) {
-  
-} */
+@media screen and (min-width: 1280px) {
+  .pageNavigation {
+    width: 1280px;
+  }
+}
