@@ -29,14 +29,13 @@ function App() {
   return (
     <>
       <AppBar />
-      <Container>
+      {/* <Container>
         <Suspense fallback={<Loader />}>
           <Switch>
-            <Route path="/" exact>
+            <Route path="/" exact> */}
 
       <Suspense fallback={<Loader />}>
         <Switch>
-
           <Route path="/auth" exact>
             <Container>
               <AuthView />
@@ -45,7 +44,6 @@ function App() {
 
           <Route path="/" exact>
             <Container>
-    
               <MainPage />
             </Container>
           </Route>
