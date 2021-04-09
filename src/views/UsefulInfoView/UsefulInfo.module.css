@@ -25,7 +25,6 @@
 .articles {
   display: block;
   padding-top: 40px;
-  padding-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -46,9 +45,17 @@
   padding-bottom: 20px;
 }
 
-h2 {
+.title {
   padding: 0;
   max-width: 130px;
+  text-align: left;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
 }
 
 .line {
@@ -67,6 +74,14 @@ h2 {
 
 .numList {
   padding: 0px 0px 0px 20px;
+  width: 205px;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .numList {
+    font-size: 14px;
+  }
 }
 
 .numList li {

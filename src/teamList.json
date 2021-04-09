@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "1",
+    "fullName": "Denis Kravchuk",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "https://github.com/luminousnow",
+    "linkedin": "https://www.linkedin.com/in/denis-kravchuk/"
+  },
+  {
+    "_id": "2",
+    "fullName": "Irina Koksharova",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "default",
+    "linkedin": "default"
+  },
+  {
+    "_id": "3",
+    "fullName": "Yurii Konoval",
+    "position": ["Scrum Master", "Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "https://github.com/Yurikonoval",
+    "linkedin": "https://www.linkedin.com/in/yurii-konoval-a735aa1a6/"
+  },
+  {
+    "_id": "4",
+    "fullName": "Tetiana Shved",
+    "position": ["Team Lead", "Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "https://github.com/TanyaShved",
+    "linkedin": "https://www.linkedin.com/in/tetiana-shved/"
+  },
+  {
+    "_id": "5",
+    "fullName": "Yaroslav Petrovskyi ",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "default",
+    "linkedin": "default"
+  },
+  {
+    "_id": "6",
+    "fullName": "Yurii Zubar",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "default",
+    "linkedin": "default"
+  },
+  {
+    "_id": "7",
+    "fullName": "Евгений Якименко",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "default",
+    "linkedin": "default"
+  },
+  {
+    "_id": "8",
+    "fullname": "Olga Koryshkina",
+    "position": ["Front-End Developer"],
+    "description": "default",
+    "photo": "default",
+    "github": "default",
+    "linkedin": "default"
+  }
+]

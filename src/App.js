@@ -10,6 +10,10 @@ import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
+const AuthPage = lazy(() =>
+  import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+);
+
 const LoginView = lazy(() =>
   import('./views/LoginView/LoginView.jsx' /* webpackChunkName: "login-view" */),
 );
@@ -21,6 +25,12 @@ const MainPage = lazy(() =>
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
+
+const ContactsPage = lazy(() =>
+  import(
+    '../src/views/ContactsView/ContactsPage.jsx' /* webpackChunkName: "contacts-page" */
+  ),
+
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
@@ -31,11 +41,9 @@ const ResultView = lazy(() =>
 function App() {
   return (
     <>
-      <AppBar />
-      {/* <Container>
-        <Suspense fallback={<Loader />}>
-          <Switch>
-            <Route path="/" exact> */}
+      <Container>
+        <AppBar />
+      </Container>
 
       <Suspense fallback={<Loader />}>
         <Switch>
@@ -64,7 +72,15 @@ function App() {
           </Route>
 
           <Route path="/useful-info">
-            <UsefulInfoView />
+            <Container>
+              <UsefulInfoView />
+            </Container>
+          </Route>
+
+          <Route path="/contacts">
+            <Container>
+              <ContactsPage />
+            </Container>
           </Route>
 
           <Route path="/results" exact>
