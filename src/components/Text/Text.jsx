@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import s from './Text.module.css';
 
 const Text = ({ style, children }) => {
     return (

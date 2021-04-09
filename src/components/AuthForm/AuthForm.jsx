@@ -1,22 +1,29 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import {
-    buttonForm,
-    activeButtonForm,
-    authButtonForm
-} from '../../styles/auth/auth-button';
+import { buttonSignIn, buttonAuthGoogle } from '../../styles/auth/auth-button';
 import { textPrimary, textSecondary } from '../../styles/auth/auth-text';
+import { inputs } from '../../initial/imputs-names';
+import { buttons } from '../../initial/buttons-names';
+import { routes } from '../../initial/routes-names';
 import s from './AuthForm.module.css';
+import sprite from '../../images/sprite.svg';
 import Text from '../Text/Text';
+import Input from '../Input/Input';
 import Button from '../Button/Button';
 
-const AuthForm = () => {
+const AuthForm = ({ message }) => {
+    const { NAME, EMAIL, PASSWORD } = inputs
+    const { GOOGLE, SIGN_IN, SIGN_UP } = buttons
+    const { LOGIN, REGISTER } = routes
+
     const {
         register,
         handleSubmit,
         reset,
         formState: { isSubmitSuccessful },
     } = useForm();
+    const location = useLocation()
 
     useEffect(() => {
         if (isSubmitSuccessful) {
@@ -24,9 +31,20 @@ const AuthForm = () => {
         }
     }, [isSubmitSuccessful, reset]);
 
-    const onFormSubmit = data => {
-        console.log(data)
+    const onFormSubmit = (data) => {
+        const newUser = {
+            name: data['Name'],
+            email: data['E-mail'],
+            password: data['Password']
+        }
+        console.log(newUser)        
     };
+
+    const getButtonName = () => {
+        return location.pathname === LOGIN
+            ? SIGN_IN
+            : SIGN_UP
+    }
 
     return (
         <div className={s.container}>
@@ -35,59 +53,30 @@ const AuthForm = () => {
                 children='You can use your Google Account to authorize:'
             />
             <Button
-                style={authButtonForm}
-                children='Google'
-                aria-label='Log in'
-            />
+                style={buttonAuthGoogle}
+                aria-label={GOOGLE}
+            >
+                <svg className={s.icon}>
+                    <use href={sprite + '#icon-google'}></use>
+                </svg>
+                {GOOGLE}
+            </Button>
             <Text
                 style={textSecondary}
-                children='Or login to our app using e-mail and password:'
+                children={message}
             />
-            <form onSubmit={handleSubmit(onFormSubmit)}>
+            <form className={s.form} onSubmit={handleSubmit(onFormSubmit)}>
                 <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <input
-                                    className={s.input}
-                                    name='email'
-                                    type="text"
-                                    defaultValue="" {...register("email")}
-                                    placeholder='E-mail'
-                                    autoComplete="off"
-                                />
-                            </li>
-                            <li>
-                                <input
-                                    className={s.input}
-                                    name='password'
-                                    type="text"
-                                    defaultValue="" {...register("password")}
-                                    placeholder='Password'
-                                    autoComplete="off"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul className={s.list}>
-                            <li className={s.item}>
-                                <Button
-                                    style={activeButtonForm}
-                                    children='Sign in'
-                                    aria-label='Sign in'
-                                />
-                            </li>
-                            <li className={s.item}>
-                                <Button
-                                    style={buttonForm}
-                                    children='Sign up'
-                                    aria-label='Sign up'
-                                />
-                            </li>
-                        </ul>
-                    </li>
+                    {location.pathname === REGISTER &&
+                        <Input name={NAME} register={register} />}
+                    <Input name={EMAIL} register={register} />
+                    <Input name={PASSWORD} register={register} />
                 </ul>
+                <Button
+                    style={buttonSignIn}
+                    name={getButtonName()}
+                    children={getButtonName()}
+                    aria-label={getButtonName()}/>
             </form>
         </div>
     )

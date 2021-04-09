@@ -6,7 +6,7 @@ export default function Loader() {
   return (
     <Spinner
       type="Rings"
-      color="darkblue"
+      color="#ff6b09"
       height={150}
       width={150}
       style={{ textAlign: 'center' }}

@@ -1,17 +1,16 @@
-body {
-  text-align: center;
-}
 .title {
   margin-top: 40px;
   padding: 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 2.5;
+  text-align: center;
 }
 .subTitle {
   /* margin-top: 12px; */
   font-size: 10px;
   line-height: 1.2;
+  text-align: center;
 }
 .line {
   display: block;
@@ -27,6 +26,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+  /* margin-left: 485px; */
 }
 .answers {
   display: flex;
@@ -46,4 +46,102 @@ body {
   border-left: 1px solid #00122f;
   opacity: 0.15;
   height: 20px;
+}
+.resultImage {
+  height: 120px;
+  margin-top: 21px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.resultTitle {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.875;
+  max-width: none;
+  margin-top: 21px;
+  text-align: center;
+}
+.resultText {
+  font-size: 10px;
+  line-height: 1.2;
+  margin-top: 10px;
+  text-align: center;
+}
+.button {
+  display: block;
+  padding: 15px 28px;
+  min-width: 190px;
+  margin-top: 22px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--btn-bg-color-primary);
+  color: var(--btn-text-color-primary);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--btn-bg-color-primary);
+
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 22px;
+    line-height: 1.36;
+  }
+  .subTitle {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  .line {
+    margin-top: 30px;
+    width: 321.5px;
+  }
+  .diagramm {
+    margin-top: 40px;
+  }
+  .answers {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .answersText {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .verticalLine {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .resultImage {
+    height: 176px;
+    margin-top: 30px;
+  }
+  .resultTitle {
+    font-size: 22px;
+    line-height: 1.36;
+    margin-top: 10px;
+  }
+  .resultText {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .button {
+    margin-top: 47px;
+    margin-bottom: 107px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .button {
+    margin-top: 47px;
+    margin-bottom: 60px;
+  }
 }
