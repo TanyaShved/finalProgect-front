@@ -1,22 +1,28 @@
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import {
-    buttonForm,
-    activeButtonForm,
-    authButtonForm
-} from '../../styles/auth/auth-button';
+import { authButtonForm } from '../../styles/auth/auth-button';
 import { textPrimary, textSecondary } from '../../styles/auth/auth-text';
+import { inputs } from '../../initial/imputs-names';
+import { buttons } from '../../initial/buttons-names';
+import operations from '../../redux/auth/auth-operations';
 import s from './AuthForm.module.css';
+import sprite from '../../images/sprite.svg';
 import Text from '../Text/Text';
+import Input from '../Input/Input';
 import Button from '../Button/Button';
+import AuthButtonList from '../../components/AuthButtonList';
 
-const AuthForm = () => {
+const AuthForm = ({ message }) => {
+    const { NAME, EMAIL, PASSWORD } = inputs
+    const { GOOGLE } = buttons
     const {
         register,
         handleSubmit,
         reset,
         formState: { isSubmitSuccessful },
     } = useForm();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         if (isSubmitSuccessful) {
@@ -24,8 +30,15 @@ const AuthForm = () => {
         }
     }, [isSubmitSuccessful, reset]);
 
-    const onFormSubmit = data => {
-        console.log(data)
+    const onFormSubmit = (e, data) => {
+        const newUser = {
+            name: data['Name'],
+            email: data['E-mail'],
+            password: data['Password']
+        }
+        console.log(e)
+        dispatch(operations.register(newUser))
+        
     };
 
     return (
@@ -36,58 +49,24 @@ const AuthForm = () => {
             />
             <Button
                 style={authButtonForm}
-                children='Google'
-                aria-label='Log in'
-            />
+                aria-label={GOOGLE}
+            >
+                <svg className={s.icon}>
+                    <use href={sprite + '#icon-google'}></use>
+                </svg>
+                {GOOGLE}
+            </Button>
             <Text
                 style={textSecondary}
-                children='Or login to our app using e-mail and password:'
+                children={message}
             />
-            <form onSubmit={handleSubmit(onFormSubmit)}>
+            <form className={s.form} onSubmit={handleSubmit(onFormSubmit)}>
                 <ul>
-                    <li>
-                        <ul>
-                            <li>
-                                <input
-                                    className={s.input}
-                                    name='email'
-                                    type="text"
-                                    defaultValue="" {...register("email")}
-                                    placeholder='E-mail'
-                                    autoComplete="off"
-                                />
-                            </li>
-                            <li>
-                                <input
-                                    className={s.input}
-                                    name='password'
-                                    type="text"
-                                    defaultValue="" {...register("password")}
-                                    placeholder='Password'
-                                    autoComplete="off"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul className={s.list}>
-                            <li className={s.item}>
-                                <Button
-                                    style={activeButtonForm}
-                                    children='Sign in'
-                                    aria-label='Sign in'
-                                />
-                            </li>
-                            <li className={s.item}>
-                                <Button
-                                    style={buttonForm}
-                                    children='Sign up'
-                                    aria-label='Sign up'
-                                />
-                            </li>
-                        </ul>
-                    </li>
+                    <Input name={NAME} register={register} />
+                    <Input name={EMAIL} register={register} />
+                    <Input name={PASSWORD} register={register} />
                 </ul>
+                <AuthButtonList />
             </form>
         </div>
     )
