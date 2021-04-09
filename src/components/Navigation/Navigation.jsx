@@ -1,11 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 import AuthMenu from '../AuthMenu/AuthMenu';
 import UserMenu from '../UserMenu';
 import Logo from '../Logo';
-import { authSelectors } from '../../redux/auth';
+// import { authSelectors } from '../../redux/auth';
 
 import sprite from '../../images/sprite.svg';
 
@@ -15,9 +15,9 @@ import s from './Navigation.module.css';
 // 4. Убрать временные переменные и их значения.
 
 export default function Navigation() {
-  const isAuthenticated = useSelector(authSelectors.getIsLoggedIn);
+  // const isAuthenticated = useSelector(authSelectors.getIsLoggedIn);
 
-  // const isAuthenticated = false; // временная переменная
+  const isAuthenticated = true; // временная переменная
 
   return (
     <nav className={s.pageNavigation}>

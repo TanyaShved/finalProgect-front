@@ -39,7 +39,6 @@
   position: fixed;
   z-index: 10;
   left: calc(50% + 102px);
-  /* right: 57px; */
   background-color: var(--bg-color-primary);
 }
 
@@ -107,10 +106,6 @@
 @media screen and (min-width: 768px) {
   .pageNavigation {
     width: 768px;
-  }
-
-  .navigationMenuWrapper {
-    margin-right: 20px;
   }
 
   .btnBurgerMenu,

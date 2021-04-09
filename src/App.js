@@ -29,10 +29,6 @@ function App() {
   return (
     <>
       <AppBar />
-      {/* <Container>
-        <Suspense fallback={<Loader />}>
-          <Switch>
-            <Route path="/" exact> */}
 
       <Suspense fallback={<Loader />}>
         <Switch>
