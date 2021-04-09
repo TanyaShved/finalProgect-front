@@ -1,4 +1,17 @@
-const buttonForm = {
+const buttonSignIn = {
+    minWidth: '109px',
+    minHeight: '60px',
+    padding: '25px 25px 21px 26px',
+    backgroundColor: '#FF6B09',
+    fontSize: '10px',
+    fontWeight: '700',
+    lineHeight: '1.2',
+    letterSpacing: '0.02em',
+    color: '#FFFFFF',
+    textTransform: 'uppercase',
+}
+
+const buttonSignUp = {
     minWidth: '109px',
     minHeight: '60px',
     padding: '25px 25px 21px 26px',
@@ -12,20 +25,9 @@ const buttonForm = {
     textTransform: 'uppercase',
 }
 
-const activeButtonForm = {
-    minWidth: '109px',
-    minHeight: '60px',
-    padding: '25px 25px 21px 26px',
-    backgroundColor: '#FF6B09',
-    fontSize: '10px',
-    fontWeight: '700',
-    lineHeight: '1.2',
-    letterSpacing: '0.02em',
-    color: '#FFFFFF',
-    textTransform: 'uppercase',
-}
-
 const authButtonForm = {
+    display: 'flex',
+    alignItems: 'center',
     minWidth: '159px',
     minHeight: '51px',
     marginBottom: '30px',
@@ -39,4 +41,4 @@ const authButtonForm = {
     boxShadow: '0px 2px 2px rgba(0, 0, 0, 0.1)'
 }
 
-export { buttonForm, activeButtonForm, authButtonForm }
+export { buttonSignIn, buttonSignUp, authButtonForm }
