@@ -10,8 +10,11 @@ import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
-const AuthView = lazy(() =>
-  import('./views/AuthView/AuthView.jsx' /* webpackChunkName: "auth-view" */),
+const LoginView = lazy(() =>
+  import('./views/LoginView/LoginView.jsx' /* webpackChunkName: "login-view" */),
+);
+const RegisterView = lazy(() =>
+  import('./views/RegisterView/RegisterView.jsx' /* webpackChunkName: "register-view" */),
 );
 const MainPage = lazy(() =>
   import(
@@ -36,9 +39,15 @@ function App() {
 
       <Suspense fallback={<Loader />}>
         <Switch>
-          <Route path="/auth" exact>
+          <Route path="/login" exact>
             <Container>
-              <AuthView />
+              <LoginView />
+            </Container>
+          </Route>
+
+          <Route path="/register" exact>
+            <Container>
+              <RegisterView />
             </Container>
           </Route>
 

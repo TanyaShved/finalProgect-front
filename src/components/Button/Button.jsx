@@ -20,7 +20,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   onClick: PropTypes.func,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.any.isRequired,
   'aria-label': PropTypes.string.isRequired,
 };
 
