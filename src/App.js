@@ -22,8 +22,8 @@ const MainPage = lazy(() =>
 function App() {
   return (
     <>
+      <AppBar />
       <Container>
-        <AppBar />
         <Suspense fallback={<Loader />}>
           <Switch>
             <Route path="/" exact>
