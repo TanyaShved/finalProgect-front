@@ -7,13 +7,19 @@ import 'react-toastify/dist/ReactToastify.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import TestView from './views/TestView';
-import ResultView from './views/ResultsView';
+import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
+const AuthView = lazy(() =>
+  import('./views/AuthView/AuthView.jsx' /* webpackChunkName: "auth-view" */),
+);
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
+);
+const ResultView = lazy(() =>
+  import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
 
 // import PrivateRoute from 'components/PrivateRoute';
@@ -27,21 +33,46 @@ function App() {
         <Suspense fallback={<Loader />}>
           <Switch>
             <Route path="/" exact>
+
+      <Suspense fallback={<Loader />}>
+        <Switch>
+
+          <Route path="/auth" exact>
+            <Container>
+              <AuthView />
+            </Container>
+          </Route>
+
+          <Route path="/" exact>
+            <Container>
+    
               <MainPage />
-            </Route>
-            <Route path="/test">
+            </Container>
+          </Route>
+
+          <Route path="/test">
+            <Container>
               <TestView />
-            </Route>
-            <Route path="/results" exact>
+            </Container>
+          </Route>
+
+          <Route path="/useful-info">
+            <UsefulInfoView />
+          </Route>
+
+          <Route path="/results" exact>
+            <Container>
               <ResultView />
-            </Route>
+            </Container>
+          </Route>
+
+          <Container>
             <Route component={NotFoundView} />
-          </Switch>
-        </Suspense>
+          </Container>
+        </Switch>
+      </Suspense>
 
-        <ToastContainer />
-      </Container>
-
+      <ToastContainer />
       <Footer />
     </>
   );

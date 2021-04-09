@@ -1,0 +1,74 @@
+.section {
+  min-height: 445px;
+  background-color: var(--bg-color-primary);
+  background-image: url('../../images/bg-usefulinfo-320.jpg');
+  background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    min-height: 900px;
+    background-image: url('../../images/bg-usefulinfo-768.jpg');
+    background-position: top 0px right 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    min-height: 725px;
+    background-image: url('../../images/bg-usefulinfo-1280.jpg');
+    background-position: top 0px right 0px;
+  }
+}
+
+.articles {
+  display: block;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .articles {
+    padding-top: 120px;
+    padding-left: 125px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .articles {
+    padding-top: 100px;
+    padding-left: 190px;
+  }
+}
+
+.articl {
+  padding-bottom: 20px;
+}
+
+h2 {
+  padding: 0;
+  max-width: 130px;
+}
+
+.line {
+  display: block;
+  margin: 10px 0px 10px;
+  border-bottom: 1px solid #00122f;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .line {
+    margin: 25px 0px 25px;
+    width: 320px;
+  }
+}
+
+.numList {
+  padding: 0px 0px 0px 20px;
+}
+
+.numList li {
+  text-align: left;
+}

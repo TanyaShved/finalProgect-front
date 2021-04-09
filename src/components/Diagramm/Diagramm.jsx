@@ -1,12 +1,13 @@
 import React from 'react';
 import { PieChart, Pie, Cell } from 'recharts';
+import '../../css/common.css';
 
 const data = [
-  { name: 'Group A', value: 11 },
-  { name: 'Group B', value: 1 },
+  { name: 'Group A', value: 9 },
+  { name: 'Group B', value: 3 },
 ];
 
-const COLORS = ['orange', 'grey'];
+const COLORS = ['#ff6b09', '#D7D7D7'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -26,7 +27,7 @@ const renderCustomizedLabel = ({
     <text
       x={x}
       y={y}
-      fill="white"
+      // fill="white"
       textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
     >
@@ -36,15 +37,15 @@ const renderCustomizedLabel = ({
 };
 export default function Diagramm() {
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={156} height={156}>
       <Pie
         data={data}
-        cx={200} //координаты
-        cy={200}
+        cx={73} //координаты
+        cy={73}
         labelLine={false}
         // label
         label={renderCustomizedLabel}
-        outerRadius={80}
+        outerRadius={78}
         fill="#8884d8"
         dataKey="value"
       >
