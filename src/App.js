@@ -10,9 +10,9 @@ import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
-const AuthPage = lazy(() =>
-  import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
-);
+// const AuthPage = lazy(() =>
+//   import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+// );
 
 const LoginView = lazy(() =>
   import('./views/LoginView/LoginView.jsx' /* webpackChunkName: "login-view" */),
@@ -29,7 +29,7 @@ const MainPage = lazy(() =>
 const ContactsPage = lazy(() =>
   import(
     '../src/views/ContactsView/ContactsPage.jsx' /* webpackChunkName: "contacts-page" */
-  ),
+  ),);
 
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
