@@ -1,7 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 
-import { authSelectors, authOperations } from '../../redux/auth';
+// import { authSelectors, authOperations } from '../../redux/auth';
 import { NavLink } from 'react-router-dom';
 
 import sprite from '../../images/sprite.svg';
@@ -14,15 +14,15 @@ import s from './UserMenu.module.css';
 // с помощью css. Возможно в дальнейшем прикрутить возможность юзеру
 // самостоятельно менять авку.
 
-export default function UserMenu() {
-  const dispatch = useDispatch();
-  const name = useSelector(authSelectors.getUserName);
+export default function UserMenu({ setActive }) {
+  // const dispatch = useDispatch();
+  // const name = useSelector(authSelectors.getUserName);
 
-  // const name = 'User1'; // Временная переменная
+  const name = 'User1'; // Временная переменная
   const userAvatar = false; // Временная переменная
 
   return (
-    <ul className={s.menuWrapper}>
+    <ul className={s.menuWrapper} onClick={() => setActive(false)}>
       <li className={s.menuItem}>
         <NavLink to="/" exact className={s.menuLink}>
           Home
@@ -55,7 +55,7 @@ export default function UserMenu() {
         <button
           type="button"
           className={s.btnLogOut}
-          onClick={() => dispatch(authOperations.onLogout)}
+          // onClick={() => dispatch(authOperations.onLogout)}
         >
           <svg className={s.sign_out}>
             <use href={sprite + '#sign-out'}></use>

@@ -20,8 +20,16 @@
 
 .btnBurgerMenu,
 .btnClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 69px;
   cursor: pointer;
+
+  border: none;
   border-left: 1px solid #e2e3e5;
+  background-color: var(--bg-color-primary);
 }
 
 .btnClose {
@@ -29,15 +37,6 @@
   z-index: 10;
   left: calc(50% + 102px);
   background-color: var(--bg-color-primary);
-}
-
-.openNavigationMenu,
-.closeNavigationMenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 69px;
 }
 
 .burgerMenuIcon {
@@ -55,13 +54,15 @@
 @media screen and (max-width: 767px) {
   .navigationMenu {
     opacity: 0;
+    visibility: 0;
     transition: opacity 200ms linear;
     pointer-events: none;
   }
 
-  .navigationMenu:target {
+  .navigationMenu.active {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+    pointer-events: initial;
   }
 }
 
