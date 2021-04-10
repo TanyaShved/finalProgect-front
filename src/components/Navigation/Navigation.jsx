@@ -17,7 +17,7 @@ import s from './Navigation.module.css';
 export default function Navigation() {
   const isAuthenticated = useSelector(authSelectors.getIsLoggedIn);
 
-  // const isAuthenticated = false; // временная переменная
+  // const isAuthenticated = true; // временная переменная
 
   return (
     <nav className={s.pageNavigation}>

@@ -7,12 +7,8 @@ export default function AuthMenu() {
   return (
     <ul className={s.menuWrapper}>
       <li className={s.menuItem}>
-        <NavLink
-          // to="/contacts"
-          exact to="/contacts"
-          data-dismiss="navigationMenu"
-          className={s.menuLink}
-        >
+        <NavLink to="/contacts" exact className={s.menuLink}>
+
           Contacts
         </NavLink>
       </li>

@@ -18,28 +18,16 @@
   display: flex;
 }
 
-/* .btnControls {
-  display: flex;
-  align-items: center;
-} */
-
 .btnBurgerMenu,
 .btnClose {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* width: 56px;
-  height: 70px; */
-
   cursor: pointer;
   border-left: 1px solid #e2e3e5;
 }
 
 .btnClose {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   left: calc(50% + 102px);
-  /* right: 57px; */
   background-color: var(--bg-color-primary);
 }
 
@@ -64,17 +52,8 @@
   height: 26px;
 }
 
-/* .btnClose {
-  display: none;
-} */
-
 @media screen and (max-width: 767px) {
-  /* .navigationMenu {
-    display: none;
-  } */
-
   .navigationMenu {
-    /* position: relative; */
     opacity: 0;
     transition: opacity 200ms linear;
     pointer-events: none;
@@ -84,33 +63,11 @@
     opacity: 1;
     pointer-events: auto;
   }
-
-  /* .navigationMenu:target .btnBurgerMenu {
-    display: none;
-  } */
-
-  /* .navigationMenuWrapper:hover .btnClose {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
-  /* .navigationMenuWrapper:hover .btnBurgerMenu {
-    display: none;
-  } */
-
-  /* .navigationMenuWrapper:hover .navigationMenu {
-    display: block;
-  } */
 }
 
 @media screen and (min-width: 768px) {
   .pageNavigation {
     width: 768px;
-  }
-
-  .navigationMenuWrapper {
-    margin-right: 20px;
   }
 
   .btnBurgerMenu,
