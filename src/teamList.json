@@ -1,74 +1,92 @@
 [
   {
     "_id": "1",
-    "fullName": "Denis Kravchuk",
+    "fullname": "Denis Kravchuk",
     "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/luminousnow",
-    "linkedin": "https://www.linkedin.com/in/denis-kravchuk/"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [
+      { "title": "github", "link": "https://github.com/luminousnow" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/denis-kravchuk/"
+      }
+    ]
   },
   {
     "_id": "2",
-    "fullName": "Irina Koksharova",
+    "fullname": "Irina Koksharova",
     "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [
+      { "title": "github", "link": "https://github.com/Irina-Koksharova" },
+      { "title": "linkedin", "link": "www.linkedin.com/in/irina-koksharova" }
+    ]
   },
   {
     "_id": "3",
-    "fullName": "Yurii Konoval",
+    "fullname": "Yurii Konoval",
     "position": ["Scrum Master", "Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/Yurikonoval",
-    "linkedin": "https://www.linkedin.com/in/yurii-konoval-a735aa1a6/"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [
+      { "title": "github", "link": "https://github.com/Yurikonoval" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/yurii-konoval-a735aa1a6/"
+      }
+    ]
   },
   {
     "_id": "4",
-    "fullName": "Tetiana Shved",
+    "fullname": "Tetiana Shved",
     "position": ["Team Lead", "Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/TanyaShved",
-    "linkedin": "https://www.linkedin.com/in/tetiana-shved/"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [
+      { "title": "github", "link": "https://github.com/TanyaShved" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/tetiana-shved/"
+      }
+    ]
   },
   {
     "_id": "5",
-    "fullName": "Yaroslav Petrovskyi ",
+    "fullname": "Yaroslav Petrovskyi ",
     "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [
+      { "title": "github", "link": "https://github.com/petrovskyi-Hub" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/petrovskyi-yaroslav/"
+      }
+    ]
   },
   {
     "_id": "6",
-    "fullName": "Yurii Zubar",
+    "fullname": "Yurii Zubar",
     "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [{ "title": "github", "link": "https://github.com/ErihKoh" }]
   },
   {
     "_id": "7",
-    "fullName": "Евгений Якименко",
+    "fullname": "Yevhen Yakymenko",
     "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
-  },
-  {
-    "_id": "8",
-    "fullname": "Olga Koryshkina",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "photoMobile": "default",
+    "photoTablet": "default",
+    "photoPc": "default",
+    "social": [{ "title": "github", "link": "https://github.com/at0mua" }]
   }
 ]
