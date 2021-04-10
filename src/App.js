@@ -9,14 +9,27 @@ import Footer from './components/Footer';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
-const AuthView = lazy(() =>
-  import('./views/AuthView/AuthView.jsx' /* webpackChunkName: "auth-view" */),
+// const AuthPage = lazy(() =>
+//   import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+// );
+
+const LoginView = lazy(() =>
+  import('./views/LoginView/LoginView.jsx' /* webpackChunkName: "login-view" */),
+);
+const RegisterView = lazy(() =>
+  import('./views/RegisterView/RegisterView.jsx' /* webpackChunkName: "register-view" */),
 );
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
+
+const ContactsPage = lazy(() =>
+  import(
+    '../src/views/ContactsView/ContactsPage.jsx' /* webpackChunkName: "contacts-page" */
+  ),);
+
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
@@ -35,13 +48,23 @@ function App() {
 
   return (
     <>
-      <AppBar />
+        <AppBar />
 
       <Suspense fallback={<Loader />}>
         <Switch>
+
           <Route path="/auth" exact>
+
+          <Route path="/login" exact>
             <Container>
-              <AuthView />
+              <LoginView />
+            </Container>
+          </Route>
+
+          <Route path="/register" exact>
+
+            <Container>
+              <RegisterView />
             </Container>
           </Route>
 
@@ -58,7 +81,15 @@ function App() {
           </Route>
 
           <Route path="/useful-info">
-            <UsefulInfoView />
+            <Container>
+              <UsefulInfoView />
+            </Container>
+          </Route>
+
+          <Route path="/contacts">
+            <Container>
+              <ContactsPage />
+            </Container>
           </Route>
 
           <Route path="/results" exact>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/common.css';
 import style from './Footer.module.css';
 import sprite from '../../images/sprite.svg';
@@ -17,9 +18,9 @@ function Footer() {
       <div className={style.container}>
         <p className={style.text}>
           <span>by </span>
-          <button id="footerBtn" className={style.footerBtn}>
+          <Link to="/contacts" className={style.footerBtn}>
             GoIT Students
-          </button>
+          </Link>
         </p>
       </div>
     </footer>

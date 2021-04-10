@@ -7,7 +7,7 @@ function UsefulInfo() {
     <section className={style.section}>
       <ul className={style.articles}>
         <li className={style.articl}>
-          <h2>Useful literature</h2>
+          <h2 className={style.title}>Useful literature</h2>
           <span className={style.line}></span>
           <ol className={style.numList}>
             <li>Testing dot.com Savin.</li>
@@ -17,7 +17,7 @@ function UsefulInfo() {
         </li>
 
         <li className={style.articl}>
-          <h2>Useful resources</h2>
+          <h2 className={style.title}>Useful resources</h2>
           <span className={style.line}></span>
           <ol className={style.numList}>
             <li>
