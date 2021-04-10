@@ -1,30 +1,22 @@
-.userInfoContainer,
-.menuWrapper,
+.menuWrapper {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 .userInfoMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* .userInfoContainer {
-  width: 640px;
-} */
-
 .menuWrapper {
   margin: 0;
   padding: 0;
 }
-
-.userInfoMenu {
-  width: 170px;
-}
-
-/* .navigationList {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-} */
 
 .menuLink {
   display: block;
@@ -55,7 +47,10 @@
   align-items: center;
   width: 30px;
   height: 30px;
+  font-size: 12px;
+  line-height: 16px;
   border-radius: 50%;
+  color: #555555;
   background: #ffffff;
   box-shadow: 0px 1px 1px rgba(18, 29, 46, 0.1);
 }
@@ -72,7 +67,6 @@
   height: 69px;
   cursor: pointer;
   border: none;
-  border-left: 1px solid #e2e3e5;
   background-color: var(--bg-color-primary);
 }
 
@@ -81,16 +75,58 @@
   height: 16px;
 }
 
-/* @media screen and (max-width: 767px) {
-} */
+@media screen and (max-width: 767px) {
+  .menuWrapper {
+    flex-direction: column;
+    text-align: center;
+
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bg-color-primary);
+    z-index: 4;
+  }
+
+  .menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    flex-basis: 70px;
+    width: 320px;
+
+    border-bottom: 1px solid #e2e3e5;
+  }
+
+  .userAvatar {
+    position: absolute;
+    z-index: 100;
+    opacity: 1;
+    top: -50px;
+    left: calc(50% + 52px);
+  }
+
+  .userName {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .menuWrapper {
+    justify-content: space-between;
     width: 500px;
   }
 
   .userInfoMenu {
     width: 160px;
+  }
+
+  .btnLogOut {
+    border-left: 1px solid #e2e3e5;
   }
 }
 
