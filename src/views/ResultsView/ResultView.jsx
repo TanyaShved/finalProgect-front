@@ -11,7 +11,7 @@ export default function ResultView() {
   const location = useLocation();
   const history = useHistory();
 
-  const correctAnswers = 9;
+  const correctAnswers = 5;
   const totalAnswers = 12;
 
   function markResult(correctAnswers, totalAnswers) {

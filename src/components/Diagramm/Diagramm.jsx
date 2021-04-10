@@ -3,8 +3,8 @@ import { PieChart, Pie, Cell, Legend } from 'recharts';
 import '../../css/common.css';
 
 const data = [
-  { name: 'Correct', value: 9 },
-  { name: 'Incorrect', value: 3 },
+  { name: 'Correct', value: 1 },
+  { name: 'Incorrect', value: 11 },
 ];
 
 const COLORS = ['#ff6b09', '#D7D7D7'];
