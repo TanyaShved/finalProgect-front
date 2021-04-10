@@ -25,7 +25,7 @@ const buttonSignUp = {
     textTransform: 'uppercase',
 }
 
-const authButtonForm = {
+const buttonAuthGoogle = {
     display: 'flex',
     alignItems: 'center',
     minWidth: '159px',
@@ -41,4 +41,4 @@ const authButtonForm = {
     boxShadow: '0px 2px 2px rgba(0, 0, 0, 0.1)'
 }
 
-export { buttonSignIn, buttonSignUp, authButtonForm }
+export { buttonSignIn, buttonSignUp, buttonAuthGoogle }

@@ -25,18 +25,6 @@ const postAnswers = createAsyncThunk(
   },
 );
 
-// const setResults = createAsyncThunk(
-//   'results/setResults',
-//   async (questionId, answer, { rejectWithValue }) => {
-//     try {
-//       const { data } = await axios.post(`/test/${testUrl}`, answers);
-//       return data;
-//     } catch (error) {
-//       return rejectWithValue(error);
-//     }
-//   },
-// );
-
 const operations = {
   fetchTests,
   postAnswers,

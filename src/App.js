@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Container from './components/Container';
@@ -6,52 +6,90 @@ import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
-import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
-const AuthView = lazy(() =>
-  import('./views/AuthView/AuthView.jsx' /* webpackChunkName: "auth-view" */),
+// const AuthPage = lazy(() =>
+//   import('./views/AuthPage/AuthPage.jsx' /* webpackChunkName: "auth-page" */),
+// );
+
+const LoginView = lazy(() =>
+  import('./views/LoginView/LoginView.jsx' /* webpackChunkName: "login-view" */),
+);
+const RegisterView = lazy(() =>
+  import('./views/RegisterView/RegisterView.jsx' /* webpackChunkName: "register-view" */),
 );
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
   ),
 );
+
+const ContactsPage = lazy(() =>
+  import(
+    '../src/views/ContactsView/ContactsPage.jsx' /* webpackChunkName: "contacts-page" */
+  ),);
+
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
+);
+const TestView = lazy(() =>
+  import('./views/TestView' /* webpackChunkName: "test-page" */),
 );
 
 // import PrivateRoute from 'components/PrivateRoute';
 // import PublicRoute from 'components/PublicRoute';
 
 function App() {
+  const [testTitle, setTestTitle] = useState({
+    firstPart: '[QA technical',
+    secondPart: 'training_]',
+  });
+
   return (
     <>
-      <AppBar />
+        <AppBar />
 
       <Suspense fallback={<Loader />}>
         <Switch>
+
           <Route path="/auth" exact>
+
+          <Route path="/login" exact>
             <Container>
-              <AuthView />
+              <LoginView />
+            </Container>
+          </Route>
+
+          <Route path="/register" exact>
+
+            <Container>
+              <RegisterView />
             </Container>
           </Route>
 
           <Route path="/" exact>
             <Container>
-              <MainPage />
+              <MainPage setTestTitle={setTestTitle} />
             </Container>
           </Route>
 
           <Route path="/test">
             <Container>
-              <TestView />
+              <TestView testTitle={testTitle} />
             </Container>
           </Route>
 
           <Route path="/useful-info">
-            <UsefulInfoView />
+            <Container>
+              <UsefulInfoView />
+            </Container>
+          </Route>
+
+          <Route path="/contacts">
+            <Container>
+              <ContactsPage />
+            </Container>
           </Route>
 
           <Route path="/results" exact>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, Legend } from 'recharts';
 import '../../css/common.css';
 
 const data = [
-  { name: 'Group A', value: 9 },
-  { name: 'Group B', value: 3 },
+  { name: 'Correct', value: 9 },
+  { name: 'Incorrect', value: 3 },
 ];
 
 const COLORS = ['#ff6b09', '#D7D7D7'];
@@ -35,17 +35,29 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
+
+let width = 156;
+let height = 156;
+let coordinateXY = 73;
+let outerRadius = 78;
+if (window.innerWidth >= 768) {
+  width = 285;
+  height = 285;
+  coordinateXY = 137.5;
+  outerRadius = 142.5;
+}
+
 export default function Diagramm() {
   return (
-    <PieChart width={156} height={156}>
+    <PieChart width={width} height={height}>
       <Pie
         data={data}
-        cx={73} //координаты
-        cy={73}
+        cx={coordinateXY}
+        cy={coordinateXY}
         labelLine={false}
         // label
         label={renderCustomizedLabel}
-        outerRadius={78}
+        outerRadius={outerRadius}
         fill="#8884d8"
         dataKey="value"
       >
@@ -53,6 +65,7 @@ export default function Diagramm() {
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
+      {/* <Legend layout="vertical" align="right" verticalAlign="top" /> */}
     </PieChart>
   );
 }
