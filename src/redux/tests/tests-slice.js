@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import testsOperations from './tests-operations';
 import { authOperations } from '../auth';
-import tests from '../../tests.json';
+// import tests from '../../tests.json';
 
 const initialState = {
-  questions: tests,
+  questions: [],
   results: [],
+  testUrl: '',
 };
 
 const testsSlice = createSlice({
@@ -24,15 +25,26 @@ const testsSlice = createSlice({
         state.results.push(payload);
       }
     },
+
+    setTestUrl(state, { payload }) {
+      state.testUrl = payload;
+    },
+
+    unsetTests(state) {
+      state.questions = [];
+    },
+    unsetResults(state) {
+      state.results = [];
+    },
   },
 
   extraReducers: {
     [testsOperations.fetchTests.fulfilled](state, action) {
-      state.questions = action.payload;
+      state.questions = action.payload.data.test;
     },
     [testsOperations.postAnswers.fulfilled](state, action) {
       state.questions = [];
-      state.payload = action.payload;
+      // state.payload = action.payload;
     },
     [authOperations.logOut.fulfilled](state, action) {
       state.questions = [];
@@ -41,5 +53,10 @@ const testsSlice = createSlice({
   },
 });
 
-export const { addResult } = testsSlice.actions;
+export const {
+  addResult,
+  unsetTests,
+  unsetResults,
+  setTestUrl,
+} = testsSlice.actions;
 export default testsSlice.reducer;

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Container from './components/Container';
@@ -6,7 +6,6 @@ import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
-import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
@@ -21,18 +20,25 @@ const MainPage = lazy(() =>
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
+const TestView = lazy(() =>
+  import('./views/TestView' /* webpackChunkName: "test-page" */),
+);
 
 // import PrivateRoute from 'components/PrivateRoute';
 // import PublicRoute from 'components/PublicRoute';
 
 function App() {
+  const [testTitle, setTestTitle] = useState({
+    firstPart: '[QA technical',
+    secondPart: 'training_]',
+  });
+
   return (
     <>
       <AppBar />
 
       <Suspense fallback={<Loader />}>
         <Switch>
-
           <Route path="/auth" exact>
             <Container>
               <AuthView />
@@ -41,13 +47,13 @@ function App() {
 
           <Route path="/" exact>
             <Container>
-              <MainPage />
+              <MainPage setTestTitle={setTestTitle} />
             </Container>
           </Route>
 
           <Route path="/test">
             <Container>
-              <TestView />
+              <TestView testTitle={testTitle} />
             </Container>
           </Route>
 
