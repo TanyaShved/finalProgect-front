@@ -53,8 +53,6 @@ function App() {
       <Suspense fallback={<Loader />}>
         <Switch>
 
-          <Route path="/auth" exact>
-
           <Route path="/login" exact>
             <Container>
               <LoginView />
