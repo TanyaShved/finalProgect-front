@@ -7,6 +7,7 @@ const initialState = {
   questions: [],
   results: [],
   testUrl: '',
+  statistics: [],
 };
 
 const testsSlice = createSlice({
@@ -44,11 +45,11 @@ const testsSlice = createSlice({
     },
     [testsOperations.postAnswers.fulfilled](state, action) {
       state.questions = [];
-      // state.payload = action.payload;
+      state.statistics = action.payload.data;
     },
     [authOperations.logOut.fulfilled](state, action) {
       state.questions = [];
-      state.payload = [];
+      state.payload = {};
     },
   },
 });

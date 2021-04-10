@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useLocation, useHistory } from 'react-router-dom';
 
 import { testsSelectors } from '../../redux/tests';
 import {
@@ -13,6 +14,8 @@ import Questions from '../../components/Questions';
 import Loader from '../../components/Loader';
 
 export default function TestView({ testTitle }) {
+  const location = useLocation();
+  const history = useHistory();
   const dispatch = useDispatch();
   const questions = useSelector(testsSelectors.getQuestions);
   const results = useSelector(testsSelectors.getResults);
@@ -43,8 +46,10 @@ export default function TestView({ testTitle }) {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(testsOperations.fetchTests(testUrl));
-  }, [dispatch, testUrl]);
+    if (questions.length === 0) {
+      dispatch(testsOperations.fetchTests(testUrl));
+    }
+  }, [dispatch, questions, testUrl]);
 
   const handleChange = event => {
     // setValue(event.target.value);
@@ -73,7 +78,11 @@ export default function TestView({ testTitle }) {
       <button
         type="button"
         disabled={results.length !== questions.length}
-        className="btn"
+        // className="btn"
+        onClick={() => {
+          dispatch(testsOperations.postAnswers({ testUrl, results }));
+          history.push('/results');
+        }}
       >
         Finish test
       </button>
