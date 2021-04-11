@@ -1,5 +1,8 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { unsetResults } from '../../redux/tests/tests-slice';
+import { testsSelectors } from '../../redux/tests';
 import Container from '../../components/Container';
 import Diagramm from '../../components/Diagramm';
 import notBadCat from '../../images/not_bad_cat.png';
@@ -11,8 +14,26 @@ export default function ResultView() {
   const location = useLocation();
   const history = useHistory();
 
-  const correctAnswers = 5;
-  const totalAnswers = 12;
+  const dispatch = useDispatch();
+  const testUrl = useSelector(testsSelectors.getTestUrl);
+  const testStatistics = useSelector(testsSelectors.getTestStatistics);
+
+  const correctAnswers = testStatistics.rightAnswer;
+  const incorrectAnswers = testStatistics.incorrectAnswer;
+  const totalAnswers = correctAnswers + incorrectAnswers;
+
+  let mainText = '';
+  let secondaryText = '';
+  let catImage = null;
+  // let testName = '';
+
+  function testName(testUrl) {
+    if (testUrl === 'theory') {
+      return '[TESTING THEORY_]';
+    } else if (testUrl === 'tech') {
+      return '[QA TECHNICAL TRAINING_]';
+    }
+  }
 
   function markResult(correctAnswers, totalAnswers) {
     if (correctAnswers === totalAnswers) {
@@ -25,10 +46,6 @@ export default function ResultView() {
   }
 
   const mark = markResult(correctAnswers, totalAnswers);
-
-  let mainText = '';
-  let secondaryText = '';
-  let catImage = null;
 
   if (mark === 5) {
     mainText = 'Excellent!!!';
@@ -45,14 +62,14 @@ export default function ResultView() {
   }
 
   const tryAgain = () => {
+    dispatch(unsetResults());
     history.push(location?.state?.from ?? '/');
   };
 
   return (
     <Container>
       <h1 className={s.title}>Results</h1>
-      {/* переменная с именем теста */}
-      <p className={s.subTitle}>[TESTING THEORY_]</p>
+      <p className={s.subTitle}>{testName(testUrl)}</p>
       <span className={s.line}></span>
       <div className={s.diagramm}>
         <Diagramm />
