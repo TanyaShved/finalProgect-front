@@ -5,8 +5,6 @@ import teamList from '../../teamList.json';
 import { arrayOf, shape, string } from 'prop-types';
 import Teammate from './Teammate/Teammate';
 
-console.log('🚀 ~ file: ContactsPage.jsx ~ line 5 ~ teamList', teamList);
-
 function ContactsPage() {
   return (
     <>
