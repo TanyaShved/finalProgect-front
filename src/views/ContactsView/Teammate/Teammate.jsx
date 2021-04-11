@@ -15,27 +15,9 @@ function Teammate({
   return (
     <li className={style.member}>
       <picture>
-        <source
-          srcSet="
-              ./images/our-masters/mobile/john-smith-418.jpg  1x,
-            "
-          media="(max-width: 767px)"
-        />
-
-        <source
-          srcSet="
-              ./images/our-masters/tablet/john-smith-450.jpg  1x,
-            "
-          media="(max-width: 1179px)"
-        />
-
-        <source
-          srcSet="
-              ./images/our-masters/desktop/john-smith-370.jpg  1x,
-            "
-          media="(min-width: 1280px)"
-        />
-
+        <source srcSet={photoMobile} media="(max-width: 767px)" />
+        <source srcSet={photoTablet} media="(max-width: 1279px)" />
+        <source srcSet={photoPc} media="(min-width: 1280px)" />
         <img className={style.photo} src={photoMobile} alt={fullname} />
       </picture>
 
