@@ -4,7 +4,8 @@
 }
 
 .text {
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 20px;
   width: 280px;
 
   font-size: 12px;
@@ -15,7 +16,9 @@
 
 @media screen and (min-width: 768px) {
   .text {
+    margin-bottom: 40px;
     width: 650px;
+
     font-size: 22px;
     line-height: 1.36;
   }
