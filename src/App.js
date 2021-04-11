@@ -37,10 +37,10 @@ const ContactsPage = lazy(() =>
   ),
 );
 
-
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
+
 const TestView = lazy(() =>
   import('./views/TestView' /* webpackChunkName: "test-page" */),
 );
@@ -59,7 +59,6 @@ function App() {
 
       <Suspense fallback={<Loader />}>
         <Switch>
-
           <PublicRoute path="/login" exact redirectTo="/" restricted>
             <Container>
               <LoginView />
@@ -85,9 +84,9 @@ function App() {
           </Route>
 
           <Route path="/useful-info">
-            <Container>
-              <UsefulInfoView />
-            </Container>
+            {/* <Container> */}
+            <UsefulInfoView />
+            {/* </Container> */}
           </Route>
 
           <Route path="/contacts">
