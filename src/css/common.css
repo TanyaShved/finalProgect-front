@@ -92,11 +92,11 @@ a {
   padding-right: 20px;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 320px;
-  }
+/* @media screen and (max-width: 767px) { */
+.container {
+  width: 320px;
 }
+/* } */
 
 @media screen and (min-width: 768px) {
   .container {

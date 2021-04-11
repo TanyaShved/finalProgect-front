@@ -1,15 +1,19 @@
-const getIsLoggedIn = (state) => state.auth.isLoggedIn;
+const getIsLoggedIn = state => state.auth.isLoggedIn;
 
-export const getIsLoading = (state) => state.auth.isLoading;
+const getUsername = state => state.auth.user.name;
 
-const getUsername = (state) => state.auth.user.name;
+const getIsFetchingCurrentUser = state => state.auth.isFetchingCurrentUser;
 
-const getIsFetchingCurrent = (state) => state.auth.isFetchingCurrentUser;
+const getIsLoading = state => state.auth.isLoading;
+
+const getError = state => state.auth.error;
 
 const authSelectors = {
   getIsLoggedIn,
   getUsername,
-  getIsFetchingCurrent,
+  getIsFetchingCurrentUser,
   getIsLoading,
+  getError,
 };
+
 export default authSelectors;

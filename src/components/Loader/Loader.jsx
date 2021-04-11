@@ -1,15 +1,15 @@
 import React from 'react';
 import Spinner from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import s from './Loader.module.css';
 
-export default function Loader() {
+const Loader = ({ width = '150', height = '150' }) => {
+ 
   return (
-    <Spinner
-      type="Rings"
-      color="#ff6b09"
-      height={150}
-      width={150}
-      style={{ textAlign: 'center' }}
-    />
+    <div className={s.spinner}>
+      <Spinner type="Rings" color="#ff6b09" width={width} height={height} />
+    </div>
   );
 }
+
+export default Loader
