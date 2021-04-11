@@ -10,7 +10,8 @@ console.log('🚀 ~ file: ContactsPage.jsx ~ line 5 ~ teamList', teamList);
 function ContactsPage() {
   return (
     <>
-      <h1>Our team</h1>
+      <h1 className={style.title}>Our team</h1>
+      <span className={style.line}></span>
       <ul className={style.team}>
         {teamList.map(
           ({

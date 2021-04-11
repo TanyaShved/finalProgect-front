@@ -11,8 +11,10 @@ function SocialNet({ title, link }) {
         href={link}
         aria-label={`ссылка на ${title}`}
         className={style.netButton}
+        target="_blank"
+        rel="noreferrer"
       >
-        <svg className={style.netIcon} width="20" height="20">
+        <svg className={style.netIcon} width="35" height="35">
           <use href={`${sprite}#${title}`}></use>
         </svg>
       </a>
