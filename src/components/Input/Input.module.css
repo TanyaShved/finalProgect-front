@@ -1,19 +1,28 @@
-.input {
-  width: 240px;
-  max-height: 56px;
+.item {
   margin-bottom: 20px;
+}
+
+.input {
+  height: 56px;
   padding: 21px 25px 20px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #bbbbbb;
   border: 1px solid #ced2d1;
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .input {
+    width: 425px;
+  }
+}
+
 .input:focus {
   transform: scale(1.01);
+}
+
+.input::placeholder {
+  color: #bbbbbb;
 }
 
 .input:focus::placeholder {

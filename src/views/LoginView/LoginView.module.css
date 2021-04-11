@@ -1,3 +1,21 @@
 .section {
   padding: 39px 0px 50px 0px;
 }
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 80px 114px 70px 115px;
+  }
+}
+
+.container {
+  padding: 0px 20px 31px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(2, 23, 42, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 20px 57px 42px 57px;
+  }
+}

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import s from './Input.module.css';
 
-const Input = ({name, register}) => {
+const Input = ({ name, register }) => {
+
     return (
-        <li>
+        <li className={s.item}>
             <input
             className={s.input}
             name={name}

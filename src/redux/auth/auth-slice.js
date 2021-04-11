@@ -1,59 +1,87 @@
 import { createSlice } from "@reduxjs/toolkit";
 import authOperations from "./auth-operations";
 
+const {
+  register,
+  logIn,
+  logOut,
+  fetchCurrentUser,
+} = authOperations;
+
 const initialState = {
-  user: { name: null, email: null },
+  user: {
+    name: null,
+    email: null
+  },
   token: null,
   isLoggedIn: false,
   isFetchingCurrentUser: false,
   isLoading: false,
+  error: null,
 };
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: {
-    [authOperations.register.pending](state) {
+    [register.pending](state, _) {
       state.isLoading = true;
+      state.error = null;
     },
-    [authOperations.register.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
+    [register.fulfilled](state, { payload }) {
+      state.user = payload.user;
+      state.token = payload.token;
       state.isLoggedIn = true;
       state.isLoading = false;
+      state.error = null;
     },
-    [authOperations.logIn.pending](state) {
+    [register.rejected](state, { payload }) {
+      state.isLoading = false;
+      state.error = payload;
+    },
+    [logIn.pending](state, _) {
       state.isLoading = true;
+      state.error = null;
     },
-    [authOperations.logIn.fulfilled](state, action) {
-      state.user = action.payload.user;
-      state.token = action.payload.token;
+    [logIn.fulfilled](state, { payload }) {
+      state.user = payload.user;
+      state.token = payload.data.token;
       state.isLoggedIn = true;
       state.isLoading = false;
+      state.error = null;
     },
-    [authOperations.logOut.pending](state) {
+    [logIn.rejected](state, { payload }) {
+      state.isLoading = false;
+      state.error = payload;
+    },
+    [logOut.pending](state, _) {
       state.isLoading = true;
+      state.error = null;
     },
-    [authOperations.logOut.fulfilled](state, action) {
+    [logOut.fulfilled](state, _) {
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
       state.isLoading = false;
+      state.error = null;
     },
-    [authOperations.fetchCurrentUser.pending](state) {
+    [logOut.rejected](state, { payload }) {
+      state.isLoading = false;
+      state.error = payload;
+    },
+    [fetchCurrentUser.pending](state, _) {
       state.isFetchingCurrentUser = true;
-      state.isLoading = true;
+      state.error = null;
     },
-    [authOperations.fetchCurrentUser.fulfilled](state, action) {
+    [fetchCurrentUser.fulfilled](state, action) {
       state.user = action.payload;
       state.isLoggedIn = true;
       state.isFetchingCurrentUser = false;
-      state.isLoading = false;
+      state.error = null;
     },
-
-    [authOperations.fetchCurrentUser.rejected](state) {
+    [fetchCurrentUser.rejected](state, { payload }) {
       state.isFetchingCurrentUser = false;
-      state.isLoading = false;
+      state.error = payload;
     },
   },
 });

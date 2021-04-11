@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Container from './components/Container';
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
+import PublicRoute from 'components/Routes/PublicRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import UsefulInfoView from './views/UsefulInfoView';
@@ -38,7 +39,6 @@ const TestView = lazy(() =>
 );
 
 // import PrivateRoute from 'components/PrivateRoute';
-// import PublicRoute from 'components/PublicRoute';
 
 function App() {
   const [testTitle, setTestTitle] = useState({
@@ -48,23 +48,22 @@ function App() {
 
   return (
     <>
-        <AppBar />
+      <AppBar />
 
       <Suspense fallback={<Loader />}>
         <Switch>
 
-          <Route path="/login" exact>
+          <PublicRoute path="/login" exact redirectTo="/" restricted>
             <Container>
               <LoginView />
             </Container>
-          </Route>
+          </PublicRoute>
 
-          <Route path="/register" exact>
-
+          <PublicRoute path="/register" exact restricted>
             <Container>
               <RegisterView />
             </Container>
-          </Route>
+          </PublicRoute>
 
           <Route path="/" exact>
             <Container>

@@ -1,11 +1,10 @@
 .list {
   display: flex;
-  font-size: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: black;
+  background-color: white;
 }
 
 .listItem {
@@ -15,14 +14,12 @@
 .link {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
   padding: 10px;
   color: inherit;
+  outline: none;
 }
 
 .activeLink {
-  background-color: white;
   border: none;
   color: #ff6b09;
 }
