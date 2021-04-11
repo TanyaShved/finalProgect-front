@@ -1,12 +1,12 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Container from './components/Container';
 import Loader from './components/Loader';
 import 'react-toastify/dist/ReactToastify.css';
+import PublicRoute from 'components/Routes/PublicRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
-import TestView from './views/TestView';
 import UsefulInfoView from './views/UsefulInfoView';
 import NotFoundView from './views/NotFoundView';
 
@@ -37,43 +37,50 @@ const ContactsPage = lazy(() =>
   ),
 );
 
+
 const ResultView = lazy(() =>
   import('./views/ResultsView' /* webpackChunkName: "results-page" */),
 );
+const TestView = lazy(() =>
+  import('./views/TestView' /* webpackChunkName: "test-page" */),
+);
 
 // import PrivateRoute from 'components/PrivateRoute';
-// import PublicRoute from 'components/PublicRoute';
 
 function App() {
+  const [testTitle, setTestTitle] = useState({
+    firstPart: '[QA technical',
+    secondPart: 'training_]',
+  });
+
   return (
     <>
-      <Container>
-        <AppBar />
-      </Container>
+      <AppBar />
 
       <Suspense fallback={<Loader />}>
         <Switch>
-          <Route path="/login" exact>
+
+          <PublicRoute path="/login" exact redirectTo="/" restricted>
             <Container>
               <LoginView />
             </Container>
-          </Route>
+          </PublicRoute>
 
-          <Route path="/register" exact>
+          <PublicRoute path="/register" exact restricted>
             <Container>
               <RegisterView />
             </Container>
-          </Route>
+          </PublicRoute>
 
           <Route path="/" exact>
             <Container>
-              <MainPage />
+              <MainPage setTestTitle={setTestTitle} />
             </Container>
           </Route>
 
           <Route path="/test">
             <Container>
-              <TestView />
+              <TestView testTitle={testTitle} />
             </Container>
           </Route>
 

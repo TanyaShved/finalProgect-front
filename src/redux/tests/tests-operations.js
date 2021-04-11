@@ -15,27 +15,15 @@ const fetchTests = createAsyncThunk(
 
 const postAnswers = createAsyncThunk(
   'questions/postAnswers',
-  async (testUrl, answers, { rejectWithValue }) => {
+  async ({ testUrl, results }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post(`/test/${testUrl}`, answers);
+      const { data } = await axios.post(`/test/result-${testUrl}`, results);
       return data;
     } catch (error) {
       return rejectWithValue(error);
     }
   },
 );
-
-// const setResults = createAsyncThunk(
-//   'results/setResults',
-//   async (questionId, answer, { rejectWithValue }) => {
-//     try {
-//       const { data } = await axios.post(`/test/${testUrl}`, answers);
-//       return data;
-//     } catch (error) {
-//       return rejectWithValue(error);
-//     }
-//   },
-// );
 
 const operations = {
   fetchTests,

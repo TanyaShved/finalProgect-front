@@ -1,4 +1,4 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -8,10 +8,10 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
-import { testsReducer } from "./tests";
-import { authReducer } from "./auth";
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import authReducer from './auth/auth-slice';
+import { testsReducer } from './tests';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -22,18 +22,24 @@ const middleware = [
 ];
 
 const authPersistConfig = {
-  key: "auth",
+  key: 'auth',
   storage,
-  whitelist: ["token"],
+  whitelist: ['token'],
+};
+
+const testPersistConfig = {
+  key: 'test',
+  storage,
+  // whitelist: ['questions', ],
 };
 
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    tests: testsReducer,
+    tests: persistReducer(testPersistConfig, testsReducer),
   },
   middleware,
-  devTools: process.env.NODE_ENV === "development",
+  devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);

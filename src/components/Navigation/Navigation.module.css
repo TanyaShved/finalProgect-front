@@ -18,38 +18,25 @@
   display: flex;
 }
 
-/* .btnControls {
-  display: flex;
-  align-items: center;
-} */
-
 .btnBurgerMenu,
 .btnClose {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* width: 56px;
-  height: 70px; */
-
-  cursor: pointer;
-  border-left: 1px solid #e2e3e5;
-}
-
-.btnClose {
-  position: fixed;
-  z-index: 10;
-  left: calc(50% + 102px);
-  /* right: 57px; */
-  background-color: var(--bg-color-primary);
-}
-
-.openNavigationMenu,
-.closeNavigationMenu {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 56px;
   height: 69px;
+  cursor: pointer;
+
+  border: none;
+  border-left: 1px solid #e2e3e5;
+  background-color: var(--bg-color-primary);
+}
+
+.btnClose {
+  position: absolute;
+  z-index: 10;
+  left: calc(50% + 102px);
+  background-color: var(--bg-color-primary);
 }
 
 .burgerMenuIcon {
@@ -64,53 +51,24 @@
   height: 26px;
 }
 
-/* .btnClose {
-  display: none;
-} */
-
 @media screen and (max-width: 767px) {
-  /* .navigationMenu {
-    display: none;
-  } */
-
   .navigationMenu {
-    /* position: relative; */
     opacity: 0;
+    visibility: 0;
     transition: opacity 200ms linear;
     pointer-events: none;
   }
 
-  .navigationMenu:target {
+  .navigationMenu.active {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+    pointer-events: initial;
   }
-
-  /* .navigationMenu:target .btnBurgerMenu {
-    display: none;
-  } */
-
-  /* .navigationMenuWrapper:hover .btnClose {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
-  /* .navigationMenuWrapper:hover .btnBurgerMenu {
-    display: none;
-  } */
-
-  /* .navigationMenuWrapper:hover .navigationMenu {
-    display: block;
-  } */
 }
 
 @media screen and (min-width: 768px) {
   .pageNavigation {
     width: 768px;
-  }
-
-  .navigationMenuWrapper {
-    margin-right: 20px;
   }
 
   .btnBurgerMenu,

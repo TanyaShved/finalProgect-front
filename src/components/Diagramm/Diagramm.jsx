@@ -1,53 +1,59 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
+import { testsSelectors } from '../../redux/tests';
 import '../../css/common.css';
 
-const data = [
-  { name: 'Correct', value: 9 },
-  { name: 'Incorrect', value: 3 },
-];
-
-const COLORS = ['#ff6b09', '#D7D7D7'];
-
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent,
-  index,
-}) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text
-      x={x}
-      y={y}
-      // fill="white"
-      textAnchor={x > cx ? 'start' : 'end'}
-      dominantBaseline="central"
-    >
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
-};
-
-let width = 156;
-let height = 156;
-let coordinateXY = 73;
-let outerRadius = 78;
-if (window.innerWidth >= 768) {
-  width = 285;
-  height = 285;
-  coordinateXY = 137.5;
-  outerRadius = 142.5;
-}
-
 export default function Diagramm() {
+  const testStatistics = useSelector(testsSelectors.getTestStatistics);
+
+  const correctAnswers = testStatistics.rightAnswer;
+  const incorrectAnswers = testStatistics.incorrectAnswer;
+
+  const data = [
+    { name: 'Correct', value: correctAnswers },
+    { name: 'Incorrect', value: incorrectAnswers },
+  ];
+
+  const COLORS = ['#ff6b09', '#D7D7D7'];
+
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+    index,
+  }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text
+        x={x}
+        y={y}
+        // fill="white"
+        textAnchor={x > cx ? 'start' : 'end'}
+        dominantBaseline="central"
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
+
+  let width = 156;
+  let height = 156;
+  let coordinateXY = 73;
+  let outerRadius = 78;
+  if (window.innerWidth >= 768) {
+    width = 285;
+    height = 285;
+    coordinateXY = 137.5;
+    outerRadius = 142.5;
+  }
   return (
     <PieChart width={width} height={height}>
       <Pie
