@@ -23,7 +23,10 @@
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/irina-koksharova_ddgc2r.jpg",
     "social": [
       { "title": "github", "link": "https://github.com/Irina-Koksharova" },
-      { "title": "linkedin", "link": "www.linkedin.com/in/irina-koksharova" }
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/irina-koksharova"
+      }
     ]
   },
   {
