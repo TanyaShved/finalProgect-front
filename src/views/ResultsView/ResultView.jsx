@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { unsetResults } from '../../redux/tests/tests-slice';
 import { testsSelectors } from '../../redux/tests';
@@ -11,7 +11,6 @@ import badCat from '../../images/bad_cat.png';
 import s from './ResultView.module.css';
 
 export default function ResultView() {
-  const location = useLocation();
   const history = useHistory();
 
   const dispatch = useDispatch();
@@ -63,7 +62,7 @@ export default function ResultView() {
 
   const tryAgain = () => {
     dispatch(unsetResults());
-    history.push(location?.state?.from ?? '/');
+    history.push('/test');
   };
 
   return (
