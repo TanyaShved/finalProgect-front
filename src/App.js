@@ -25,6 +25,7 @@ const RegisterView = lazy(() =>
     './views/RegisterView/RegisterView.jsx' /* webpackChunkName: "register-view" */
   ),
 );
+
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */

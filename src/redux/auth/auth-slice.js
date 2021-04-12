@@ -44,7 +44,7 @@ const authSlice = createSlice({
       state.error = null;
     },
     [logIn.fulfilled](state, { payload }) {
-      state.user = payload.user;
+      state.user.name = payload.data.name;
       state.token = payload.data.token;
       state.isLoggedIn = true;
       state.isLoading = false;
