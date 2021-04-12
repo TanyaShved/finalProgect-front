@@ -36,7 +36,7 @@ export default Teammate;
 
 Teammate.propTypes = {
   fullname: string.isRequired,
-  position: array.isRequired,
+  position: string.isRequired,
   photoMobile: string.isRequired,
   photoTablet: string.isRequired,
   photoPc: string.isRequired,

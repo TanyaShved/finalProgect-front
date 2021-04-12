@@ -1,8 +1,8 @@
 [
   {
-    "_id": "4",
+    "_id": "1",
     "fullname": "Tetiana Shved",
-    "position": ["Team Lead", "Front-End Developer"],
+    "position": "Team Lead, Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/tetiana-shved_pstm0p.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/tetiana-shved_purua3.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/tetiana-shved_wnpwep.jpg",
@@ -15,9 +15,9 @@
     ]
   },
   {
-    "_id": "3",
+    "_id": "2",
     "fullname": "Yurii Konoval",
-    "position": ["Scrum Master", "Front-End Developer"],
+    "position": "Scrum Master, Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yurii-konoval_mse1qq.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/yurii-konoval_ehdsyq.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yurii-konoval_vvzlf2.jpg",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "_id": "1",
+    "_id": "3",
     "fullname": "Denis Kravchuk",
     "position": ["Front-End Developer"],
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/denis-kravchuk_vxovmv.jpg",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "_id": "2",
+    "_id": "4",
     "fullname": "Irina Koksharova",
     "position": ["Front-End Developer"],
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/irina-koksharova_sawqq5.jpg",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "_id": "7",
+    "_id": "6",
     "fullname": "Yevhen Yakymenko",
     "position": ["Front-End Developer"],
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yevhen-yakymenko_awqkvk.jpg",
@@ -85,7 +85,7 @@
     "social": [{ "title": "github", "link": "https://github.com/at0mua" }]
   },
   {
-    "_id": "6",
+    "_id": "7",
     "fullname": "Yurii Zubar",
     "position": ["Front-End Developer"],
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145280/team/mobile/yurii-zubar_xk3gwh.jpg",
