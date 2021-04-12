@@ -1,24 +1,17 @@
-.pageNavigation {
-  margin: 0 auto;
+.modalWrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 320px;
-  height: 70px;
-  border: 1px solid #e2e3e5;
 }
 
-.logo {
-  display: block;
-  margin-left: 20px;
-  cursor: pointer;
-}
-
-.navigationMenuWrapper {
+.menuWrapper {
   display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.btnBurgerMenu,
 .btnClose,
 .btnLogOut {
   display: flex;
@@ -32,7 +25,6 @@
   background-color: var(--bg-color-primary);
 }
 
-.btnBurgerMenu,
 .btnClose {
   border-left: 1px solid #e2e3e5;
 }
@@ -40,14 +32,9 @@
 .btnClose {
   position: absolute;
   z-index: 10;
-  left: calc(50% + 102px);
+  top: -70px;
+  left: calc(50% + 103px);
   background-color: var(--bg-color-primary);
-}
-
-.burgerMenuIcon {
-  display: block;
-  width: 20px;
-  height: 20px;
 }
 
 .closeIcon {
@@ -63,6 +50,7 @@
 
 @media screen and (max-width: 767px) {
   .navigationMenu {
+    margin: 0 auto;
     opacity: 0;
     visibility: 0;
     transition: opacity 200ms linear;
@@ -74,29 +62,53 @@
     visibility: visible;
     pointer-events: initial;
   }
+
+  .modalWrapper {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bg-color-primary);
+    z-index: 4;
+  }
+
+  .menuWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .pageNavigation {
-    width: 768px;
+  .navigationMenu {
+    width: 500px;
   }
 
-  .btnBurgerMenu,
+  .modalWrapper {
+    justify-content: space-between;
+  }
+
+  .menuWrapper {
+    justify-content: space-between;
+    width: 310px;
+  }
+
   .btnClose {
     display: none;
   }
 
-  .modalWrapper {
-    width: 500px;
+  .btnLogOut {
+    border-left: 1px solid #e2e3e5;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .pageNavigation {
-    width: 1280px;
+  .navigationMenu {
+    width: 640px;
   }
 
-  .modalWrapper {
-    width: 640px;
+  .menuWrapper {
+    width: 380px;
   }
 }
