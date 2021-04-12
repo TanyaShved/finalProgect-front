@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { testsSelectors } from '../../redux/tests';
 import {
@@ -14,7 +14,6 @@ import Questions from '../../components/Questions';
 import Loader from '../../components/Loader';
 
 export default function TestView({ testTitle }) {
-  const location = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
   const questions = useSelector(testsSelectors.getQuestions);
@@ -71,26 +70,29 @@ export default function TestView({ testTitle }) {
   };
 
   return (
-    <>
-      <h1 className={styles.testTitle}>
-        {testTitle.firstPart} <br></br> {testTitle.secondPart}
-      </h1>
-      <button
-        type="button"
-        disabled={results.length !== questions.length}
-        // className="btn"
-        onClick={() => {
-          dispatch(testsOperations.postAnswers({ testUrl, results }));
-          history.push('/results');
-        }}
-      >
-        Finish test
-      </button>
-      <div>
-        <p>
-          Question <span>{quesNumb + 1}</span>/{questions.length}
+    <div className={styles.container}>
+      <div className={styles.testHeader}>
+        <h1 className={styles.testTitle}>
+          {testTitle.firstPart} <br></br> {testTitle.secondPart}
+        </h1>
+        <button
+          type="button"
+          disabled={results.length !== questions.length}
+          className={styles.finishTestBtn}
+          onClick={() => {
+            dispatch(testsOperations.postAnswers({ testUrl, results }));
+            history.push('/results');
+          }}
+        >
+          Finish test
+        </button>
+      </div>
+      <div className={styles.testCard}>
+        <p className={styles.quesStat}>
+          Question <span className={styles.quesNumb}>{quesNumb + 1}</span>/
+          {questions.length}
         </p>
-        <h2 className={styles.text}>{question}</h2>
+        <h2 className={styles.question}>{question}</h2>
 
         {questions.length > 0 ? (
           <Questions
@@ -119,6 +121,6 @@ export default function TestView({ testTitle }) {
       >
         Next question
       </button>
-    </>
+    </div>
   );
 }
