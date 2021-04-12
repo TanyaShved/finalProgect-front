@@ -2,7 +2,7 @@
   {
     "_id": "1",
     "fullname": "Tetiana Shved",
-    "position": "Team Lead, Front-End Developer",
+    "position": "Team Lead, Back-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/tetiana-shved_pstm0p.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/tetiana-shved_purua3.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/tetiana-shved_wnpwep.jpg",
@@ -32,7 +32,7 @@
   {
     "_id": "3",
     "fullname": "Denis Kravchuk",
-    "position": ["Front-End Developer"],
+    "position": "Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/denis-kravchuk_vxovmv.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/denis-kravchuk_fw8m3l.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/denis-kravchuk_igm5jr.jpg",
@@ -47,7 +47,7 @@
   {
     "_id": "4",
     "fullname": "Irina Koksharova",
-    "position": ["Front-End Developer"],
+    "position": "Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/irina-koksharova_sawqq5.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/irina-koksharova_bqgrwv.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/irina-koksharova_ddgc2r.jpg",
@@ -63,7 +63,7 @@
   {
     "_id": "5",
     "fullname": "Yaroslav Petrovskyi",
-    "position": ["Front-End Developer"],
+    "position": "Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/petrovskyi-yaroslav_wvzqlr.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/petrovskyi-yaroslav_ptgyan.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/petrovskyi-yaroslav_bu8j6k.jpg",
@@ -78,7 +78,7 @@
   {
     "_id": "6",
     "fullname": "Yevhen Yakymenko",
-    "position": ["Front-End Developer"],
+    "position": "Back-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yevhen-yakymenko_awqkvk.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/yevhen-yakymenko_eev0m0.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yevhen-yakymenko_cbemrj.jpg",
@@ -87,7 +87,7 @@
   {
     "_id": "7",
     "fullname": "Yurii Zubar",
-    "position": ["Front-End Developer"],
+    "position": "Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145280/team/mobile/yurii-zubar_xk3gwh.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146542/team/tablet/yurii-zubar_vpqkvy.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yurii-zubar_bjzwdw.jpg",
