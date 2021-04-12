@@ -26,6 +26,11 @@
   outline: none;
 }
 
+.link:hover,
+.link:focus {
+  transform: scale(1.02);
+}
+
 .activeLink {
   border: none;
   color: #ff6b09;

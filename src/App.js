@@ -1,9 +1,9 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Container from './components/Container';
 import Loader from './components/Loader';
-import 'react-toastify/dist/ReactToastify.css';
 import PublicRoute from 'components/Routes/PublicRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
