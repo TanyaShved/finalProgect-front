@@ -37,13 +37,13 @@ export default function TestView({ testTitle }) {
     }
   }, [questionId, results]);
 
-  useEffect(() => {
-    return () => {
-      // Очистить store
-      dispatch(unsetTests());
-      dispatch(unsetResults());
-    };
-  }, [dispatch]);
+  // useEffect(() => {
+  //   return () => {
+  //     // Очистить store
+  //     dispatch(unsetTests());
+  //     dispatch(unsetResults());
+  //   };
+  // }, [dispatch]);
 
   useEffect(() => {
     if (questions.length === 0) {
