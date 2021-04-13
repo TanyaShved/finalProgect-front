@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Container from './components/Container';
 import Loader from './components/Loader';
 import PublicRoute from 'components/Routes/PublicRoute';
+import PublicRouteRegister from 'components/Routes/PublicRouteRegister';
 import PrivateRoute from 'components/Routes/PrivateRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
@@ -65,11 +66,11 @@ function App() {
             </Container>
           </PublicRoute>
 
-          <PublicRoute path="/register" exact redirectTo="/" restricted>
+          <PublicRouteRegister path="/register" exact restricted>
             <Container>
               <RegisterView />
             </Container>
-          </PublicRoute>
+          </PublicRouteRegister>
 
           <PrivateRoute path="/" redirectTo="/login" exact>
             <Container>
