@@ -9,12 +9,6 @@ const useStyles = makeStyles({
   root: {
     display: 'block',
   },
-  label: {
-    fontWeight: '500',
-    fontSize: '10px',
-    lineHeight: '12px',
-    letterSpacing: '0.02em',
-  },
 });
 
 const OrangeRadio = withStyles({
@@ -33,6 +27,7 @@ export default function Questions({ value, handleChange, answers }) {
   return (
     <FormControl component="fieldset" className={classes.root}>
       <RadioGroup
+        // className={classes.typography.body1}
         aria-label="answers"
         name="answers"
         value={value}
@@ -40,7 +35,7 @@ export default function Questions({ value, handleChange, answers }) {
       >
         {answers.map((answer, index) => (
           <FormControlLabel
-            className={classes.label}
+            // className={classes.label}
             value={answer}
             control={<OrangeRadio />}
             label={answer}
