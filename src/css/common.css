@@ -1,6 +1,7 @@
 :root {
-  --bg-color-primary: #f5f6fb;
+  --bg-color-primary: #e5e5e5;
   --bg-color-secondary: #02172a;
+  --test-bg-color: #ffffff;
 
   --text-color-primary: #000000;
   --text-color-secondary: rgba(255, 255, 255, 0.4);
