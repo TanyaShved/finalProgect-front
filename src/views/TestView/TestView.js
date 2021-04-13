@@ -47,14 +47,6 @@ export default function TestView({ testTitle }) {
     );
   };
 
-  // const onPrevious = () => {
-  //   setQuesNumb(quesNumb - 1);
-  // };
-
-  // const onNext = () => {
-  //   setQuesNumb(quesNumb + 1);
-  // };
-
   return (
     <>
       <h1 className={styles.testTitle}>
