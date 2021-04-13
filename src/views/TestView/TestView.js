@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { testsSelectors } from '../../redux/tests';
-import {
-  addResult,
-  unsetTests,
-  unsetResults,
-} from '../../redux/tests/tests-slice';
+import { addResult } from '../../redux/tests/tests-slice';
 import { testsOperations } from '../../redux/tests';
 import styles from './TestView.module.css';
 import Questions from '../../components/Questions';
 import Loader from '../../components/Loader';
 
 export default function TestView({ testTitle }) {
-  const location = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
   const questions = useSelector(testsSelectors.getQuestions);
@@ -37,14 +32,6 @@ export default function TestView({ testTitle }) {
     }
   }, [questionId, results]);
 
-  // useEffect(() => {
-  //   return () => {
-  //     // Очистить store
-  //     dispatch(unsetTests());
-  //     dispatch(unsetResults());
-  //   };
-  // }, [dispatch]);
-
   useEffect(() => {
     if (questions.length === 0) {
       dispatch(testsOperations.fetchTests(testUrl));
@@ -52,8 +39,6 @@ export default function TestView({ testTitle }) {
   }, [dispatch, questions, testUrl]);
 
   const handleChange = event => {
-    // setValue(event.target.value);
-
     dispatch(
       addResult({
         questionId,
@@ -62,13 +47,13 @@ export default function TestView({ testTitle }) {
     );
   };
 
-  const onPrevious = () => {
-    setQuesNumb(quesNumb - 1);
-  };
+  // const onPrevious = () => {
+  //   setQuesNumb(quesNumb - 1);
+  // };
 
-  const onNext = () => {
-    setQuesNumb(quesNumb + 1);
-  };
+  // const onNext = () => {
+  //   setQuesNumb(quesNumb + 1);
+  // };
 
   return (
     <>
@@ -106,7 +91,7 @@ export default function TestView({ testTitle }) {
       <button
         type="button"
         disabled={quesNumb === 0}
-        onClick={() => onPrevious()}
+        onClick={() => setQuesNumb(quesNumb - 1)}
         className="btn"
       >
         Previous question
@@ -114,7 +99,7 @@ export default function TestView({ testTitle }) {
       <button
         type="button"
         disabled={quesNumb === questions.length - 1}
-        onClick={() => onNext()}
+        onClick={() => setQuesNumb(quesNumb + 1)}
         className="btn secondary"
       >
         Next question
