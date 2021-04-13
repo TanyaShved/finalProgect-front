@@ -50,14 +50,6 @@ export default function TestView({ testTitle }) {
     );
   };
 
-  // const onPrevious = () => {
-  //   setQuesNumb(quesNumb - 1);
-  // };
-
-  // const onNext = () => {
-  //   setQuesNumb(quesNumb + 1);
-  // };
-
   return (
     <div className={styles.container}>
       <div className={styles.testHeader}>
@@ -97,7 +89,7 @@ export default function TestView({ testTitle }) {
         <button
           type="button"
           disabled={quesNumb === 0}
-          onClick={() => onPrevious()}
+          onClick={() => setQuesNumb(quesNumb - 1)}
           className={classes.prevBtn}
         >
           <svg className={classes.leftArrow}>
@@ -108,7 +100,7 @@ export default function TestView({ testTitle }) {
         <button
           type="button"
           disabled={quesNumb === questions.length - 1}
-          onClick={() => onNext()}
+          onClick={() => setQuesNumb(quesNumb + 1)}
           className={classes.nextBtn}
         >
           <span className={classes.navBtnsText}>Next question</span>
@@ -118,6 +110,5 @@ export default function TestView({ testTitle }) {
         </button>
       </div>
     </div>
-
   );
 }
