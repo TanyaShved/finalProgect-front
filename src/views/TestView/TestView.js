@@ -12,6 +12,8 @@ import { testsOperations } from '../../redux/tests';
 import styles from './TestView.module.css';
 import Questions from '../../components/Questions';
 import Loader from '../../components/Loader';
+import classes from './TestView.module.css';
+import sprite from '../../images/sprite.svg';
 
 export default function TestView({ testTitle }) {
   const history = useHistory();
@@ -24,6 +26,7 @@ export default function TestView({ testTitle }) {
   const question = questions[quesNumb]?.question;
   const answers = questions[quesNumb]?.answers;
   const questionId = questions[quesNumb]?.questionId;
+  const disabled = results.length !== questions.length;
 
   useEffect(() => {
     const answer = results.find(result => result.questionId === questionId)
@@ -51,8 +54,6 @@ export default function TestView({ testTitle }) {
   }, [dispatch, questions, testUrl]);
 
   const handleChange = event => {
-    // setValue(event.target.value);
-
     dispatch(
       addResult({
         questionId,
@@ -78,7 +79,7 @@ export default function TestView({ testTitle }) {
         <button
           type="button"
           disabled={results.length !== questions.length}
-          className={styles.finishTestBtn}
+          className={disabled ? styles.finishTestBtnDis : styles.finishTestBtn}
           onClick={() => {
             dispatch(testsOperations.postAnswers({ testUrl, results }));
             history.push('/results');
@@ -105,22 +106,30 @@ export default function TestView({ testTitle }) {
         )}
       </div>
 
-      <button
-        type="button"
-        disabled={quesNumb === 0}
-        onClick={() => onPrevious()}
-        className="btn"
-      >
-        Previous question
-      </button>
-      <button
-        type="button"
-        disabled={quesNumb === questions.length - 1}
-        onClick={() => onNext()}
-        className="btn secondary"
-      >
-        Next question
-      </button>
+      <div className={classes.navBtns}>
+        <button
+          type="button"
+          disabled={quesNumb === 0}
+          onClick={() => onPrevious()}
+          className={classes.prevBtn}
+        >
+          <svg className={classes.leftArrow}>
+            <use href={sprite + '#left-arrow'}></use>
+          </svg>
+          <span className={classes.navBtnsText}>Previous question</span>
+        </button>
+        <button
+          type="button"
+          disabled={quesNumb === questions.length - 1}
+          onClick={() => onNext()}
+          className={classes.nextBtn}
+        >
+          <span className={classes.navBtnsText}>Next question</span>
+          <svg className={classes.rightArrow}>
+            <use href={sprite + '#right-arrow'}></use>
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
