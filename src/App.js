@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Container from './components/Container';
 import Loader from './components/Loader';
 import PublicRoute from 'components/Routes/PublicRoute';
+import PublicRouteRegister from 'components/Routes/PublicRouteRegister';
+import PrivateRoute from 'components/Routes/PrivateRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import UsefulInfoView from './views/UsefulInfoView';
@@ -46,8 +48,6 @@ const TestView = lazy(() =>
   import('./views/TestView' /* webpackChunkName: "test-page" */),
 );
 
-// import PrivateRoute from 'components/PrivateRoute';
-
 function App() {
   const [testTitle, setTestTitle] = useState({
     firstPart: '[QA technical',
@@ -66,41 +66,41 @@ function App() {
             </Container>
           </PublicRoute>
 
-          <PublicRoute path="/register" exact restricted>
+          <PublicRouteRegister path="/register" exact restricted>
             <Container>
               <RegisterView />
             </Container>
-          </PublicRoute>
+          </PublicRouteRegister>
 
-          <Route path="/" exact>
+          <PrivateRoute path="/" redirectTo="/login" exact>
             <Container>
               <MainPage setTestTitle={setTestTitle} />
             </Container>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/test">
+          <PrivateRoute path="/test" redirectTo="/login">
             <Container>
               <TestView testTitle={testTitle} />
             </Container>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/useful-info">
+          <PrivateRoute path="/useful-info" redirectTo="/login">
             {/* <Container> */}
             <UsefulInfoView />
             {/* </Container> */}
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/contacts">
+          <PublicRoute path="/contacts">
             <Container>
               <ContactsPage />
             </Container>
-          </Route>
+          </PublicRoute>
 
-          <Route path="/results" exact>
+          <PrivateRoute path="/results" redirectTo="/login">
             <Container>
               <ResultView />
             </Container>
-          </Route>
+          </PrivateRoute>
 
           <Container>
             <Route component={NotFoundView} />

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { authSelectors } from '../../redux/auth';
+import authSelectors from 'redux/auth/auth-selectors';
 
 import s from './UserInfo.module.css';
 
 export default function UserInfo() {
-  const name = useSelector(authSelectors.getUserName);
+  const name = useSelector(authSelectors.getUsername);
 
   //   const name = 'User1'; // Временная переменная
   const userAvatar = false; // Временная переменная

@@ -78,7 +78,7 @@
   {
     "_id": "6",
     "fullname": "Yevhen Yakymenko",
-    "position": "Back-End Developer",
+    "position": "Front-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yevhen-yakymenko_awqkvk.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/yevhen-yakymenko_eev0m0.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yevhen-yakymenko_cbemrj.jpg",
@@ -87,7 +87,7 @@
   {
     "_id": "7",
     "fullname": "Yurii Zubar",
-    "position": "Front-End Developer",
+    "position": "Back-End Developer",
     "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145280/team/mobile/yurii-zubar_xk3gwh.jpg",
     "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146542/team/tablet/yurii-zubar_vpqkvy.jpg",
     "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yurii-zubar_bjzwdw.jpg",

@@ -14,6 +14,7 @@ const initialState = {
     email: null
   },
   token: null,
+  isRegistered: false,
   isLoggedIn: false,
   isFetchingCurrentUser: false,
   isLoading: false,
@@ -28,10 +29,8 @@ const authSlice = createSlice({
       state.isLoading = true;
       state.error = null;
     },
-    [register.fulfilled](state, { payload }) {
-      state.user = payload.user;
-      state.token = payload.token;
-      state.isLoggedIn = true;
+    [register.fulfilled](state, _) {
+      state.isRegistered = true;
       state.isLoading = false;
       state.error = null;
     },
