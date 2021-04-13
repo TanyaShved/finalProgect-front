@@ -22,10 +22,10 @@ export default function UserInfo() {
           className={s.userAvatar}
         />
       ) : (
-        <span className={s.userAvatar}>{name[0]}</span>
+        <span className={s.userAvatar}>{name ? name[0] : null}</span> // Ломалось при первой загрузке страницы
       )}
 
-      <span className={s.userName}> {name} </span>
+      <span className={s.userName}>{name && null}</span> 
     </div>
   );
 }
