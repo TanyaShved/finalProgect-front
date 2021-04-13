@@ -21,16 +21,24 @@ function UsefulInfo() {
           <span className={style.line}></span>
           <ol className={style.numList}>
             <li>
-              <a href="https://dou.ua/">dou.ua</a>
+              <a className={style.linkToSite} href="https://dou.ua/">
+                dou.ua
+              </a>
             </li>
             <li>
-              <a href="https://habr.com/">Habr</a>
+              <a className={style.linkToSite} href="https://habr.com/">
+                Habr
+              </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/">facebook.com/QA</a>
+              <a className={style.linkToSite} href="https://www.facebook.com/">
+                facebook.com/QA
+              </a>
             </li>
             <li>
-              <a href="https://goit.ua/">goit.ua</a>
+              <a className={style.linkToSite} href="https://goit.ua/">
+                goit.ua
+              </a>
             </li>
           </ol>
         </li>
