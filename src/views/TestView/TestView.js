@@ -3,11 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import { testsSelectors } from '../../redux/tests';
-import {
-  addResult,
-  unsetTests,
-  unsetResults,
-} from '../../redux/tests/tests-slice';
+import { addResult } from '../../redux/tests/tests-slice';
 import { testsOperations } from '../../redux/tests';
 import styles from './TestView.module.css';
 import Questions from '../../components/Questions';
@@ -40,14 +36,6 @@ export default function TestView({ testTitle }) {
   }, [questionId, results]);
 
   useEffect(() => {
-    return () => {
-      // Очистить store
-      dispatch(unsetTests());
-      dispatch(unsetResults());
-    };
-  }, [dispatch]);
-
-  useEffect(() => {
     if (questions.length === 0) {
       dispatch(testsOperations.fetchTests(testUrl));
     }
@@ -62,13 +50,13 @@ export default function TestView({ testTitle }) {
     );
   };
 
-  const onPrevious = () => {
-    setQuesNumb(quesNumb - 1);
-  };
+  // const onPrevious = () => {
+  //   setQuesNumb(quesNumb - 1);
+  // };
 
-  const onNext = () => {
-    setQuesNumb(quesNumb + 1);
-  };
+  // const onNext = () => {
+  //   setQuesNumb(quesNumb + 1);
+  // };
 
   return (
     <div className={styles.container}>
@@ -105,7 +93,6 @@ export default function TestView({ testTitle }) {
           <Loader />
         )}
       </div>
-
       <div className={classes.navBtns}>
         <button
           type="button"
@@ -131,5 +118,6 @@ export default function TestView({ testTitle }) {
         </button>
       </div>
     </div>
+
   );
 }

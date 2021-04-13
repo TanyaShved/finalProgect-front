@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { inputs } from '../../initial/imputs-names';
-import { buttons } from '../../initial/buttons-names';
-import { routes } from '../../initial/routes-names';
+import { inputs } from 'initial/imputs-names';
+import { buttons } from 'initial/buttons-names';
+import { routes } from 'initial/routes-names';
 import s from './AuthForm.module.css';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import InputName from 'components/Input/InputName';
+import InputEmail from 'components/Input/InputEmail';
+import InputPassword from 'components/Input/InputPassword';
+import Button from 'components/Button';
 
 const AuthForm = ({ onFormSubmit }) => {
     const { NAME, EMAIL, PASSWORD } = inputs
@@ -21,7 +23,7 @@ const AuthForm = ({ onFormSubmit }) => {
         register,
         handleSubmit,
         reset,
-        formState: { isSubmitSuccessful },
+        formState: { isSubmitSuccessful, errors },
     } = useForm();
 
     useEffect(() => {
@@ -48,9 +50,18 @@ const AuthForm = ({ onFormSubmit }) => {
             <form className={s.form} onSubmit={handleSubmit(onFormSubmit)}>
                 <ul>
                     {location.pathname === REGISTER &&                       
-                        <Input name={NAME} register={register} />}
-                    <Input name={EMAIL} register={register} />
-                    <Input name={PASSWORD} register={register} />          
+                        <InputName
+                            name={NAME}
+                            register={register}
+                            errors={errors} />}
+                    <InputEmail
+                        name={EMAIL}
+                        register={register}
+                        errors={errors} />
+                    <InputPassword
+                        name={PASSWORD}
+                        register={register}
+                        errors={errors} />
                 </ul>
                 <Button
                     className={s.button}

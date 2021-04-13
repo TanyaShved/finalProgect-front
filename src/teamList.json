@@ -1,74 +1,96 @@
 [
   {
     "_id": "1",
-    "fullName": "Denis Kravchuk",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/luminousnow",
-    "linkedin": "https://www.linkedin.com/in/denis-kravchuk/"
+    "fullname": "Tetiana Shved",
+    "position": "Team Lead, Back-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/tetiana-shved_pstm0p.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/tetiana-shved_purua3.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/tetiana-shved_wnpwep.jpg",
+    "social": [
+      { "title": "github", "link": "https://github.com/TanyaShved" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/tetiana-shved/"
+      }
+    ]
   },
   {
     "_id": "2",
-    "fullName": "Irina Koksharova",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "fullname": "Yurii Konoval",
+    "position": "Scrum Master, Front-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yurii-konoval_mse1qq.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/yurii-konoval_ehdsyq.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yurii-konoval_vvzlf2.jpg",
+    "social": [
+      { "title": "github", "link": "https://github.com/Yurikonoval" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/yurii-konoval-a735aa1a6/"
+      }
+    ]
   },
   {
     "_id": "3",
-    "fullName": "Yurii Konoval",
-    "position": ["Scrum Master", "Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/Yurikonoval",
-    "linkedin": "https://www.linkedin.com/in/yurii-konoval-a735aa1a6/"
+    "fullname": "Denis Kravchuk",
+    "position": "Front-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/denis-kravchuk_vxovmv.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/denis-kravchuk_fw8m3l.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/denis-kravchuk_igm5jr.jpg",
+    "social": [
+      { "title": "github", "link": "https://github.com/luminousnow" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/denis-kravchuk/"
+      }
+    ]
   },
   {
     "_id": "4",
-    "fullName": "Tetiana Shved",
-    "position": ["Team Lead", "Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "https://github.com/TanyaShved",
-    "linkedin": "https://www.linkedin.com/in/tetiana-shved/"
+    "fullname": "Irina Koksharova",
+    "position": "Front-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/irina-koksharova_sawqq5.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/irina-koksharova_bqgrwv.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/irina-koksharova_ddgc2r.jpg",
+    "social": [
+      { "title": "github", "link": "https://github.com/Irina-Koksharova" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/irina-koksharova"
+      }
+    ]
   },
+
   {
     "_id": "5",
-    "fullName": "Yaroslav Petrovskyi ",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "fullname": "Yaroslav Petrovskyi",
+    "position": "Front-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/petrovskyi-yaroslav_wvzqlr.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/petrovskyi-yaroslav_ptgyan.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/petrovskyi-yaroslav_bu8j6k.jpg",
+    "social": [
+      { "title": "github", "link": "https://github.com/petrovskyi-Hub" },
+      {
+        "title": "linkedin",
+        "link": "https://www.linkedin.com/in/petrovskyi-yaroslav/"
+      }
+    ]
   },
   {
     "_id": "6",
-    "fullName": "Yurii Zubar",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "fullname": "Yevhen Yakymenko",
+    "position": "Front-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145279/team/mobile/yevhen-yakymenko_awqkvk.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146541/team/tablet/yevhen-yakymenko_eev0m0.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yevhen-yakymenko_cbemrj.jpg",
+    "social": [{ "title": "github", "link": "https://github.com/at0mua" }]
   },
   {
     "_id": "7",
-    "fullName": "Евгений Якименко",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
-  },
-  {
-    "_id": "8",
-    "fullname": "Olga Koryshkina",
-    "position": ["Front-End Developer"],
-    "description": "default",
-    "photo": "default",
-    "github": "default",
-    "linkedin": "default"
+    "fullname": "Yurii Zubar",
+    "position": "Back-End Developer",
+    "photoMobile": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618145280/team/mobile/yurii-zubar_xk3gwh.jpg",
+    "photoTablet": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618146542/team/tablet/yurii-zubar_vpqkvy.jpg",
+    "photoPc": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618147265/team/pc/yurii-zubar_bjzwdw.jpg",
+    "social": [{ "title": "github", "link": "https://github.com/ErihKoh" }]
   }
 ]

@@ -5,9 +5,14 @@ import s from './AuthMenu.module.css';
 
 export default function AuthMenu({ setActive }) {
   return (
-    <ul className={s.menuWrapper} onClick={() => setActive(false)}>
+    <ul className={s.menuWrapper}>
       <li className={s.menuItem}>
-        <NavLink to="/contacts" exact className={s.menuLink}>
+        <NavLink
+          to="/contacts"
+          exact
+          className={s.menuLink}
+          onClick={() => setActive(false)}
+        >
           Contacts
         </NavLink>
       </li>

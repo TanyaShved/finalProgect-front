@@ -44,7 +44,6 @@ const testsSlice = createSlice({
       state.questions = action.payload.data.test;
     },
     [testsOperations.postAnswers.fulfilled](state, action) {
-      state.questions = [];
       state.statistics = action.payload.data;
     },
     [authOperations.logOut.fulfilled](state, action) {

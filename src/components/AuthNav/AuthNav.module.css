@@ -7,6 +7,13 @@
   background-color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .list {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
+
 .listItem {
   width: 50%;
 }
@@ -17,6 +24,11 @@
   padding: 10px;
   color: inherit;
   outline: none;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.02);
 }
 
 .activeLink {

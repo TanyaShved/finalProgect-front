@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {
+  setTestUrl,
+  unsetTests,
+  unsetResults,
+} from '../../redux/tests/tests-slice';
+
 import '../../css/common.css';
 import style from './MainPage.module.css';
 import sprite from '../../images/sprite.svg';
-import { setTestUrl } from '../../redux/tests/tests-slice';
-import { useDispatch } from 'react-redux';
 
 function MainPage({ setTestTitle }) {
   const dispatch = useDispatch();
@@ -32,6 +37,8 @@ function MainPage({ setTestTitle }) {
                 secondPart: 'training_]',
               });
               dispatch(setTestUrl('tech'));
+              dispatch(unsetTests());
+              dispatch(unsetResults());
             }}
           >
             QA technical
@@ -51,6 +58,8 @@ function MainPage({ setTestTitle }) {
                 secondPart: 'theory_]',
               });
               dispatch(setTestUrl('theory'));
+              dispatch(unsetTests());
+              dispatch(unsetResults());
             }}
           >
             Testing

@@ -4,7 +4,15 @@
 
 @media screen and (min-width: 768px) {
   .section {
-    padding: 80px 114px 70px 115px;
+    padding: 80px 94px 70px 95px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    display: flex;
+    justify-content: space-between;
+    padding: 99px 105px;
   }
 }
 
@@ -17,5 +25,12 @@
 @media screen and (min-width: 768px) {
   .container {
     padding: 20px 57px 42px 57px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 505px;
+    padding: 20px 40px 42px 40px;
   }
 }

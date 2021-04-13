@@ -8,8 +8,11 @@ function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.container}>
+        <svg className={style.iconCopirigth}>
+          <use href={sprite + '#icon-copyright'}></use>
+        </svg>{' '}
         <p className={style.text}>
-          &#xA9; 2021 | All Rights Reserved | Developed with
+          2021 | All Rights Reserved | Developed with
         </p>
         <svg className={style.icon}>
           <use href={sprite + '#icon-heart-fill'}></use>

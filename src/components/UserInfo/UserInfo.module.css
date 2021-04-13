@@ -1,0 +1,56 @@
+.userInfoMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  z-index: 100;
+}
+
+.userAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 50%;
+  color: #555555;
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(18, 29, 46, 0.1);
+}
+
+.userName {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .userInfoMenu {
+    top: 19px;
+    left: calc(50% + 52px);
+  }
+
+  .userName {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .userInfoMenu {
+    min-width: 90px;
+    top: 19px;
+    left: calc(50% + 220px);
+  }
+
+  .btnLogOut {
+    border-left: 1px solid #e2e3e5;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .userInfoMenu {
+    width: 100px;
+    left: calc(50% + 465px);
+  }
+}

@@ -19,17 +19,22 @@
 }
 
 .btnBurgerMenu,
-.btnClose {
+.btnClose,
+.btnLogOut {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 56px;
   height: 69px;
   cursor: pointer;
-
+  outline: none;
   border: none;
-  border-left: 1px solid #e2e3e5;
   background-color: var(--bg-color-primary);
+}
+
+.btnBurgerMenu,
+.btnClose {
+  border-left: 1px solid #e2e3e5;
 }
 
 .btnClose {
@@ -49,6 +54,11 @@
   display: block;
   width: 26px;
   height: 26px;
+}
+
+.sign_out {
+  width: 16px;
+  height: 16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -75,10 +85,18 @@
   .btnClose {
     display: none;
   }
+
+  .modalWrapper {
+    width: 500px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .pageNavigation {
     width: 1280px;
+  }
+
+  .modalWrapper {
+    width: 640px;
   }
 }
