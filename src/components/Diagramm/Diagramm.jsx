@@ -72,6 +72,7 @@ export default function Diagramm() {
         ))}
       </Pie>
       {/* <Legend layout="vertical" align="right" verticalAlign="top" /> */}
+      {/* <Legend verticalAlign="top" /> */}
     </PieChart>
   );
 }
