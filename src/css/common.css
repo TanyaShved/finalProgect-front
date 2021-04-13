@@ -71,20 +71,20 @@ a {
 
 .container {
   width: 320px;
-  /* min-height: 445px; */
+  min-height: 445px;
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    /* min-height: 900px; */
+    min-height: 900px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
-    /* min-height: 724px; */
+    min-height: 724px;
   }
 }
 
@@ -104,18 +104,6 @@ a {
     font-size: 12px;
   }
 }
-
-/* @media screen and (min-width: 768px) {
-  .title {
-    font-size: 22px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .title {
-    font-size: 22px;
-  }
-} */
 
 .btn {
   display: inline-block;
