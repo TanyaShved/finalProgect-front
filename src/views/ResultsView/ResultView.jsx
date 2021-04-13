@@ -24,7 +24,6 @@ export default function ResultView() {
   let mainText = '';
   let secondaryText = '';
   let catImage = null;
-  // let testName = '';
 
   function testName(testUrl) {
     if (testUrl === 'theory') {
