@@ -1,0 +1,9 @@
+.diagrammBlock {
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .diagrammBlock {
+    padding-left: 85px;
+  }
+}
