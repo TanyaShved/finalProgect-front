@@ -90,7 +90,7 @@ export default function TestView({ testTitle }) {
           type="button"
           disabled={quesNumb === 0}
           onClick={() => setQuesNumb(quesNumb - 1)}
-          className={classes.prevBtn}
+          className={quesNumb === 0 ? classes.prevBtnDis : classes.prevBtn}
         >
           <svg className={classes.leftArrow}>
             <use href={sprite + '#left-arrow'}></use>
@@ -101,7 +101,11 @@ export default function TestView({ testTitle }) {
           type="button"
           disabled={quesNumb === questions.length - 1}
           onClick={() => setQuesNumb(quesNumb + 1)}
-          className={classes.nextBtn}
+          className={
+            quesNumb === questions.length - 1
+              ? classes.nextBtnDis
+              : classes.nextBtn
+          }
         >
           <span className={classes.navBtnsText}>Next question</span>
           <svg className={classes.rightArrow}>
