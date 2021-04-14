@@ -3,12 +3,34 @@
     "_id": "1",
     "fullname": "Tetiana Shved",
     "position": "Team Lead, FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429069/team/mobile/x1/tetiana-shved_eyp2er.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/tetiana-shved_zsa7ot.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/tetiana-shved_lzoqlq.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429113/team/mobile/x2/tetiana-shved_p8mvkh.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429159/team/tablet/x2/tetiana-shved_wzuise.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x2/tetiana-shved_wjmb28.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429069/team/mobile/x1/tetiana-shved_eyp2er.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/tetiana-shved_scmf01.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/tetiana-shved_zsa7ot.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/tetiana-shved_v8tpy7.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/tetiana-shved_lzoqlq.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/tetiana-shved_qcxy1y.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433381/team/webp/mobile/x1/tetiana-shved_crr9b9.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x2/tetiana-shved_xqq7fq.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/tablet/x1/tetiana-shved_xbni21.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x2/tetiana-shved_kuumkh.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/pc/x1/tetiana-shved_w50bwa.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x2/tetiana-shved_da1x4h.webp"
+        }
+      }
+    },
     "social": [
       { "title": "github", "link": "https://github.com/TanyaShved" },
       {
@@ -21,12 +43,34 @@
     "_id": "2",
     "fullname": "Yurii Konoval",
     "position": "Scrum Master, FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yurii-konoval_uuic8c.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yurii-konoval_gbetu2.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yurii-konoval_dfglj3.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429112/team/mobile/x2/yurii-konoval_nue0kd.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429160/team/tablet/x2/yurii-konoval_adwjug.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429137/team/pc/x2/yurii-konoval_g9uqkx.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yurii-konoval_uuic8c.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/yurii-konoval_xx5rbq.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yurii-konoval_gbetu2.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/yurii-konoval_vao5s1.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yurii-konoval_dfglj3.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/yurii-konoval_etppu2.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433381/team/webp/mobile/x1/yurii-konoval_okyfcv.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/mobile/x2/yurii-konoval_ohoymf.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x1/yurii-konoval_akbhzg.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433387/team/webp/tablet/x2/yurii-konoval_xkhjk0.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x1/yurii-konoval_jfhhxc.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/pc/x2/yurii-konoval_oi6onb.webp"
+        }
+      }
+    },
     "social": [
       { "title": "github", "link": "https://github.com/Yurikonoval" },
       {
@@ -39,12 +83,34 @@
     "_id": "3",
     "fullname": "Denis Kravchuk",
     "position": "FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429069/team/mobile/x1/denis-kravchuk_wx4cws.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/denis-kravchuk_g81ilu.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/denis-kravchuk_mbkw0n.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429112/team/mobile/x2/denis-kravchuk_xodlyz.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429160/team/tablet/x2/denis-kravchuk_lqpfff.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429137/team/pc/x2/denis-kravchuk_qcjhhz.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429069/team/mobile/x1/denis-kravchuk_wx4cws.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/denis-kravchuk_eldqow.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/denis-kravchuk_g81ilu.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/denis-kravchuk_fskeiw.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/denis-kravchuk_mbkw0n.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/denis-kravchuk_cnvzyy.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433381/team/webp/mobile/x1/denis-kravchuk_l2r6nz.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x2/denis-kravchuk_ju6rhj.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/tablet/x1/denis-kravchuk_v5xtav.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x2/denis-kravchuk_e4ojc0.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/pc/x1/denis-kravchuk_fuqb97.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x2/denis-kravchuk_fftbuk.webp"
+        }
+      }
+    },
     "social": [
       { "title": "github", "link": "https://github.com/luminousnow" },
       {
@@ -57,12 +123,34 @@
     "_id": "4",
     "fullname": "Irina Koksharova",
     "position": "FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/irina-koksharova_pd9oe3.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/irina-koksharova_ar7c3r.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/irina-koksharova_ogjgxq.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429113/team/mobile/x2/irina-koksharova_ib8myx.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429159/team/tablet/x2/irina-koksharova_fyshxo.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x2/irina-koksharova_ydiq1a.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/irina-koksharova_pd9oe3.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/irina-koksharova_nw8uxo.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/irina-koksharova_ar7c3r.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/irina-koksharova_qswtbw.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/irina-koksharova_ogjgxq.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/irina-koksharova_kz20ca.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433381/team/webp/mobile/x1/irina-koksharova_qen9qt.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x2/irina-koksharova_e2izpb.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/tablet/x1/irina-koksharova_v4eknm.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x2/irina-koksharova_zofxii.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/pc/x1/irina-koksharova_vnfvug.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x2/irina-koksharova_pwhp7u.webp"
+        }
+      }
+    },
     "social": [
       { "title": "github", "link": "https://github.com/Irina-Koksharova" },
       {
@@ -76,12 +164,34 @@
     "_id": "5",
     "fullname": "Yaroslav Petrovskyi",
     "position": "FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yaroslav-petrovskyi_owgnnt.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yaroslav-petrovskyi_szulur.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yaroslav-petrovskyi_wtokpl.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429112/team/mobile/x2/yaroslav-petrovskyi_ncnixw.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429159/team/tablet/x2/yaroslav-petrovskyi_nsz0hp.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x2/yaroslav-petrovskyi_cmhvyo.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yaroslav-petrovskyi_owgnnt.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/yaroslav-petrovskyi_cbkcid.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yaroslav-petrovskyi_szulur.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/yaroslav-petrovskyi_dibrxp.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yaroslav-petrovskyi_wtokpl.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/yaroslav-petrovskyi_tkgbnz.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x1/yaroslav-petrovskyi_k0mtnn.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x2/yaroslav-petrovskyi_zsnwby.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/tablet/x1/yaroslav-petrovskyi_entrlc.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x2/yaroslav-petrovskyi_a755jz.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/pc/x1/yaroslav-petrovskyi_yxsbzu.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x2/yaroslav-petrovskyi_omnnx6.webp"
+        }
+      }
+    },
     "social": [
       { "title": "github", "link": "https://github.com/petrovskyi-Hub" },
       {
@@ -94,24 +204,68 @@
     "_id": "6",
     "fullname": "Yevhen Yakymenko",
     "position": "FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yevhen-yakymenko_k0x02e.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yevhen-yakymenko_vzuxsi.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yevhen-yakymenko_rvnudn.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429112/team/mobile/x2/yevhen-yakymenko_zeweho.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429159/team/tablet/x2/yevhen-yakymenko_dgkoxc.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x2/yevhen-yakymenko_c38ciw.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yevhen-yakymenko_k0x02e.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/yevhen-yakymenko_ysukwi.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yevhen-yakymenko_vzuxsi.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/yevhen-yakymenko_pfqlti.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429135/team/pc/x1/yevhen-yakymenko_rvnudn.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/yevhen-yakymenko_xoawxx.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433381/team/webp/mobile/x1/yevhen-yakymenko_vb93qi.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x2/yevhen-yakymenko_wspbce.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/tablet/x1/yevhen-yakymenko_abefcn.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x2/yevhen-yakymenko_qbitgw.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/pc/x1/yevhen-yakymenko_piax5w.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/pc/x2/yevhen-yakymenko_igwfyf.webp"
+        }
+      }
+    },
     "social": [{ "title": "github", "link": "https://github.com/at0mua" }]
   },
   {
     "_id": "7",
     "fullname": "Yurii Zubar",
     "position": "FullStack Developer",
-    "photoMobileX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yurii-zubar_ld5s2z.jpg",
-    "photoTabletX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yurii-zubar_mj06iq.jpg",
-    "photoPcX1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x1/yurii-zubar_uqsisl.jpg",
-    "photoMobileX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429113/team/mobile/x2/yurii-zubar_eta3no.png",
-    "photoTabletX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429162/team/tablet/x2/yurii-zubar_pszvrv.png",
-    "photoPcX2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429138/team/pc/x2/yurii-zubar_jxx7ix.png",
+    "photo": {
+      "mobile": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429070/team/mobile/x1/yurii-zubar_ld5s2z.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437591/team/mobile/x2/yurii-zubar_y6okwx.jpg"
+      },
+      "tablet": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429158/team/tablet/x1/yurii-zubar_mj06iq.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437626/team/tablet/x2/yurii-zubar_rkj1fh.jpg"
+      },
+      "pc": {
+        "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618429136/team/pc/x1/yurii-zubar_uqsisl.jpg",
+        "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618437667/team/pc/x2/yurii-zubar_ti6exo.jpg"
+      },
+      "webp": {
+        "mobile": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433382/team/webp/mobile/x1/yurii-zubar_chq6nh.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433383/team/webp/mobile/x2/yurii-zubar_fexd0v.webp"
+        },
+        "tablet": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433386/team/webp/tablet/x1/yurii-zubar_epo0i8.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433387/team/webp/tablet/x2/yurii-zubar_w1b0ln.webp"
+        },
+        "pc": {
+          "x1": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433384/team/webp/pc/x1/yurii-zubar_gslxue.webp",
+          "x2": "https://res.cloudinary.com/dfjzopqyh/image/upload/v1618433385/team/webp/pc/x2/yurii-zubar_ua95f8.webp"
+        }
+      }
+    },
     "social": [{ "title": "github", "link": "https://github.com/ErihKoh" }]
   }
 ]
