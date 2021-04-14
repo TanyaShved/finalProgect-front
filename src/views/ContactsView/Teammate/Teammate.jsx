@@ -19,15 +19,15 @@ function Teammate({
     <li className={style.member}>
       <picture>
         <source
-          srcSet={`${photoMobileX1} 1x, ${photoMobileX2} 2x`}
+          srcset={`${photoMobileX1} 1x, ${photoMobileX2} 2x`}
           media="(max-width: 767px)"
         />
         <source
-          srcSet={`${photoTabletX1} 1x, ${photoTabletX2} 2x`}
+          srcset={`${photoTabletX1} 1x, ${photoTabletX2} 2x`}
           media="(max-width: 1279px)"
         />
         <source
-          srcSet={`${photoPcX1} 1x, ${photoPcX2} 2x`}
+          srcset={`${photoPcX1} 1x, ${photoPcX2} 2x`}
           media="(min-width: 1280px)"
         />
         <img className={style.photo} src={photoMobileX1} alt={fullname} />
