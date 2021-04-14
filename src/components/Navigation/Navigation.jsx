@@ -7,7 +7,7 @@ import UserInfo from '../UserInfo';
 import Logo from '../Logo';
 import Modal from '../Modal';
 import NavItem from '../NavItem';
-import { authSelectors } from '../../redux/auth';
+import authSelectors from 'redux/auth/auth-selectors';
 
 import sprite from '../../images/sprite.svg';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { authOperations } from '../../redux/auth';
+import authOperations from 'redux/auth/auth-operations';
 
 import sprite from '../../images/sprite.svg';
 
@@ -17,7 +17,7 @@ export default function Modal({ modalActive, setActive, children }) {
         <button
           type="button"
           className={s.btnLogOut}
-          onClick={() => dispatch(authOperations.onLogout)}
+          onClick={() => dispatch(authOperations.logOut)}
         >
           <svg className={s.sign_out}>
             <use href={sprite + '#sign-out'}></use>

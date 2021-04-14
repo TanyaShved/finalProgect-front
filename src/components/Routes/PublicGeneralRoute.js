@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import authSelectors from 'redux/auth/auth-selectors';
 
-const PublicRoute = ({
+const PublicGeneralRoute = ({
   children,
   restricted = false,
   redirectTo = '/login',
@@ -19,9 +19,9 @@ const PublicRoute = ({
   );
 };
 
-PublicRoute.propTypes = {
+PublicGeneralRoute.propTypes = {
   children: PropTypes.node.isRequired,
   redirectTo: PropTypes.string,
 };
 
-export default PublicRoute;
+export default PublicGeneralRoute;

@@ -1,6 +1,6 @@
 import s from './AuthGoogle.module.css';
 import { buttons } from 'initial/buttons-names';
-import Button from 'components/Button';
+import { googleURL } from 'constants.js';
 import sprite from 'images/sprite.svg';
 
 const AuthGoogle = () => {
@@ -11,15 +11,16 @@ const AuthGoogle = () => {
             <p className={s.text}>
                 You can use your Google Account to authorize:
             </p>
-            <Button
-                className={s.button}
+            <a
+                className={s.link}
+                href={googleURL}
                 aria-label={GOOGLE}
             >
                 <svg className={s.icon}>
-                    <use href={sprite + '#icon-google'}/>
+                    <use href={sprite + '#icon-google'} />
                 </svg>
                 {GOOGLE}
-            </Button>
+            </a>
         </div>
     )
 }

@@ -28,7 +28,7 @@
   }
 }
 
-.button {
+.link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,6 +37,7 @@
   padding: 10px;
   font-weight: 700;
   line-height: 1.21;
+  color: inherit;
   background-color: #fafafa;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   border: none;
@@ -50,8 +51,8 @@
   }
 }
 
-.button:hover,
-.button:focus {
+.link:hover,
+.link:focus {
   transform: scale(1.02);
 }
 

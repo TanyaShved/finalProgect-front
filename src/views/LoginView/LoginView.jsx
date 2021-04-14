@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import s from './LoginView.module.css';
-import operations from 'redux/auth/auth-operations';
+import authOperations from 'redux/auth/auth-operations';
 import AuthIntro from 'components/AuthIntro';
 import AuthNav from 'components/AuthNav';
 import AuthGoogle from 'components/AuthGoogle';
@@ -14,7 +14,7 @@ const LoginView = () => {
             email: data['E-mail'],
             password: data['Password']
         }
-        dispatch(operations.logIn(user));
+        dispatch(authOperations.logIn(user));
     };
     
     return (
