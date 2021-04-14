@@ -2,7 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
 import { testsSelectors } from '../../redux/tests';
-import '../../css/common.css';
+import s from './Diagramm.module.css';
+// import '../../css/common.css';
 
 export default function Diagramm() {
   const testStatistics = useSelector(testsSelectors.getTestStatistics);
@@ -44,18 +45,18 @@ export default function Diagramm() {
     );
   };
 
-  let width = 156;
+  let width = 280;
   let height = 156;
   let coordinateXY = 73;
   let outerRadius = 78;
   if (window.innerWidth >= 768) {
-    width = 285;
+    width = 450;
     height = 285;
     coordinateXY = 137.5;
     outerRadius = 142.5;
   }
   return (
-    <PieChart width={width} height={height}>
+    <PieChart className={s.diagrammBlock} width={width} height={height}>
       <Pie
         data={data}
         cx={coordinateXY}
@@ -71,7 +72,7 @@ export default function Diagramm() {
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
-      {/* <Legend layout="vertical" align="right" verticalAlign="top" /> */}
+      <Legend layout="vertical" align="right" verticalAlign="top" />
       {/* <Legend verticalAlign="top" /> */}
     </PieChart>
   );
