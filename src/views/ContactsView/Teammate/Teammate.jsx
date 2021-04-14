@@ -7,18 +7,30 @@ import SocialNet from './SocialNets/SocialNets';
 function Teammate({
   fullname,
   position,
-  photoMobile,
-  photoTablet,
-  photoPc,
+  photoMobileX1,
+  photoTabletX1,
+  photoPcX1,
+  photoMobileX2,
+  photoTabletX2,
+  photoPcX2,
   social,
 }) {
   return (
     <li className={style.member}>
       <picture>
-        <source srcSet={photoMobile} media="(max-width: 767px)" />
-        <source srcSet={photoTablet} media="(max-width: 1279px)" />
-        <source srcSet={photoPc} media="(min-width: 1280px)" />
-        <img className={style.photo} src={photoMobile} alt={fullname} />
+        <source
+          srcset={`${photoMobileX1} 1x, ${photoMobileX2} 2x`}
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset={`${photoTabletX1} 1x, ${photoTabletX2} 2x`}
+          media="(max-width: 1279px)"
+        />
+        <source
+          srcset={`${photoPcX1} 1x, ${photoPcX2} 2x`}
+          media="(min-width: 1280px)"
+        />
+        <img className={style.photo} src={photoMobileX1} alt={fullname} />
       </picture>
 
       <h3 className={style.name}>{fullname}</h3>
@@ -37,8 +49,11 @@ export default Teammate;
 Teammate.propTypes = {
   fullname: string.isRequired,
   position: string.isRequired,
-  photoMobile: string.isRequired,
-  photoTablet: string.isRequired,
-  photoPc: string.isRequired,
+  photoMobileX1: string.isRequired,
+  photoTabletX1: string.isRequired,
+  photoPcX1: string.isRequired,
+  photoMobileX2: string.isRequired,
+  photoTabletX2: string.isRequired,
+  photoPcX2: string.isRequired,
   social: array.isRequired,
 };

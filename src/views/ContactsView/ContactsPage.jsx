@@ -16,18 +16,24 @@ function ContactsPage() {
             _id,
             fullname,
             position,
-            photoMobile,
-            photoTablet,
-            photoPc,
+            photoMobileX1,
+            photoTabletX1,
+            photoPcX1,
+            photoMobileX2,
+            photoTabletX2,
+            photoPcX2,
             social,
           }) => (
             <Teammate
               key={_id}
               fullname={fullname}
               position={position}
-              photoMobile={photoMobile}
-              photoTablet={photoTablet}
-              photoPc={photoPc}
+              photoMobileX1={photoMobileX1}
+              photoTabletX1={photoTabletX1}
+              photoPcX1={photoPcX1}
+              photoMobileX2={photoMobileX2}
+              photoTabletX2={photoTabletX2}
+              photoPcX2={photoPcX2}
               social={social}
             />
           ),
