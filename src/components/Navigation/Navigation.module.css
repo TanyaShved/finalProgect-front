@@ -64,12 +64,12 @@
 @media screen and (max-width: 767px) {
   .navigationMenu {
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
     transition: opacity 200ms linear;
     pointer-events: none;
   }
 
-  .navigationMenu.active {
+  .navigationMenuActive {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;

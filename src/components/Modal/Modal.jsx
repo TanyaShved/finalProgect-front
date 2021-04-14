@@ -11,9 +11,16 @@ export default function Modal({ modalActive, setActive, children }) {
   const dispatch = useDispatch();
 
   return (
-    <div className={!modalActive ? s.navigationMenu : s.navigationMenu.active}>
+    <div
+      className={
+        modalActive
+          ? s.navigationMenu + ' ' + s.navigationMenuActive
+          : s.navigationMenu
+      }
+    >
       <div className={s.modalWrapper}>
         <ul className={s.menuWrapper}>{children}</ul>
+
         <button
           type="button"
           className={s.btnLogOut}
@@ -23,6 +30,7 @@ export default function Modal({ modalActive, setActive, children }) {
             <use href={sprite + '#sign-out'}></use>
           </svg>
         </button>
+
         <button className={s.btnClose} onClick={() => setActive(false)}>
           <svg className={s.closeIcon}>
             <use href={sprite + '#close'}></use>

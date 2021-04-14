@@ -57,7 +57,7 @@
     pointer-events: none;
   }
 
-  .navigationMenu.active {
+  .navigationMenuActive {
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
