@@ -43,7 +43,11 @@ export default function Navigation() {
 
         {!isAuthenticated ? (
           <div
-            className={modalActive ? s.navigationMenu.active : s.navigationMenu}
+            className={
+              modalActive
+                ? s.navigationMenu + ' ' + s.navigationMenuActive
+                : s.navigationMenu
+            }
           >
             <AuthMenu setActive={setModalActive} />
             <button
