@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,7 +13,7 @@ import PrivateRoute from 'components/Routes/PrivateRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import UsefulInfoView from './views/UsefulInfoView'; //Уточнить, почему делали не через динамические импорты
-import NotFoundView from './views/NotFoundView'; //Уточнить, почему делали не через динамические импорты
+// import NotFoundView from './views/NotFoundView'; //Уточнить, почему делали не через динамические импорты
 
 const LoginView = lazy(() =>
   import(
@@ -47,74 +47,77 @@ const App = () => {
     firstPart: '[QA technical',
     secondPart: 'training_]',
   });
-  const dispatch = useDispatch()
-  const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrentUser)
+  const dispatch = useDispatch();
+  const isFetchingCurrentUser = useSelector(
+    authSelectors.getIsFetchingCurrentUser,
+  );
 
   useEffect(() => {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
   return (
-    <>   
-      {isFetchingCurrentUser
-        ? <Loader />
-        : <>
+    <>
+      {isFetchingCurrentUser ? (
+        <Loader />
+      ) : (
+        <>
           <AppBar />
-          
-            <Switch>
-              <Suspense fallback={<Loader />}>
-                <PublicGeneralRoute path="/login" redirectTo="/" restricted>
-                  <Container>
-                    <LoginView />
-                  </Container>
-                </PublicGeneralRoute>
-            
-                <PublicRegisterRoute path="/register" restricted>
-                  <Container>
-                    <RegisterView />
-                  </Container>
-                </PublicRegisterRoute>
-            
-                <PrivateRoute path="/" exact>
-                  <Container>
-                    <MainPage setTestTitle={setTestTitle} />
-                  </Container>
-                </PrivateRoute>
-                
-                <PrivateRoute path="/test">
-                  <Container>
-                    <TestView testTitle={testTitle} />
-                  </Container>
-                </PrivateRoute>
-            
-                <PrivateRoute path="/useful-info">
-                  {/* <Container> */}
-                  <UsefulInfoView />
-                  {/* </Container> */}
-                </PrivateRoute>
-                
-                <PublicGeneralRoute path="/contacts">
-                  <Container>
-                    <ContactsPage />
-                  </Container>
-                </PublicGeneralRoute>
-            
-                <PrivateRoute path="/results">
-                  <Container>
-                    <ResultView />
-                  </Container>
-                </PrivateRoute>
-                
+
+          <Switch>
+            <Suspense fallback={<Loader />}>
+              <PublicGeneralRoute path="/login" redirectTo="/" restricted>
                 <Container>
-                  <Route component={NotFoundView} />
+                  <LoginView />
                 </Container>
-              </Suspense>
-            </Switch>
+              </PublicGeneralRoute>
+
+              <PublicRegisterRoute path="/register" restricted>
+                <Container>
+                  <RegisterView />
+                </Container>
+              </PublicRegisterRoute>
+
+              <PrivateRoute path="/" exact>
+                <Container>
+                  <MainPage setTestTitle={setTestTitle} />
+                </Container>
+              </PrivateRoute>
+
+              <PrivateRoute path="/test">
+                <Container>
+                  <TestView testTitle={testTitle} />
+                </Container>
+              </PrivateRoute>
+
+              <PrivateRoute path="/useful-info">
+                {/* <Container> */}
+                <UsefulInfoView />
+                {/* </Container> */}
+              </PrivateRoute>
+
+              <PublicGeneralRoute path="/contacts">
+                <Container>
+                  <ContactsPage />
+                </Container>
+              </PublicGeneralRoute>
+
+              <PrivateRoute path="/results">
+                <Container>
+                  <ResultView />
+                </Container>
+              </PrivateRoute>
+
+              {/* <Container>
+                  <Route component={NotFoundView} />
+                </Container> */}
+            </Suspense>
+          </Switch>
           <Footer />
         </>
-      }
+      )}
       <ToastContainer />
     </>
   );
-}
+};
 export default App;
