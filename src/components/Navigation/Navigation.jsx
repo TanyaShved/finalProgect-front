@@ -57,7 +57,7 @@ export default function Navigation() {
               <button
                 type="button"
                 className={s.btnLogOut}
-                onClick={() => dispatch(authOperations.onLogout)}
+                onClick={() => dispatch(authOperations.logOut())}
               >
                 <svg className={s.sign_out}>
                   <use href={sprite + '#sign-out'}></use>
