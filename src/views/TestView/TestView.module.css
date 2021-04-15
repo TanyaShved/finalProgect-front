@@ -16,6 +16,7 @@
 @media screen and (min-width: 1280px) {
   .container {
     width: 820px;
+    height: calc(100vh - 127px);
   }
 }
 
