@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import authOperations from "./auth-operations";
 
 const {
+  googleAuth, 
   register,
   logIn,
   logOut,
@@ -24,6 +25,20 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: {
+    [googleAuth.pending](state, _) {
+      state.isLoading = true;
+      state.error = null;
+    },
+    [googleAuth.fulfilled](state,{ payload }) {
+      state.user.name = payload.data.name;
+      state.user.email = payload.data.email;
+      state.isLoading = false;
+      state.error = null;
+    },
+    [googleAuth.rejected](state, { payload }) {
+      state.isLoading = false;
+      state.error = payload;
+    },
     [register.pending](state, _) {
       state.isLoading = true;
       state.error = null;

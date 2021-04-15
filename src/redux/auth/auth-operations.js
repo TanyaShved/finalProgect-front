@@ -13,6 +13,19 @@ const token = {
   },
 };
 
+const googleAuth = createAsyncThunk(
+  'auth/googleAuth',
+  async (googleToken, { rejectWithValue }) => {
+    token.set(googleToken);
+    try {
+      const { data } = await axios.get('/auth/userinfo');
+      return data;
+    } catch ({ response }) {
+      return rejectWithValue(response.status);
+    }
+  },
+);
+
 const register = createAsyncThunk(
   "auth/register",
   async (userData, { rejectWithValue }) => {
@@ -69,9 +82,10 @@ const fetchCurrentUser = createAsyncThunk(
 );
 
 const authOperations = {
+  googleAuth, 
   register,
   logIn,
   logOut,
-  fetchCurrentUser,
+  fetchCurrentUser
 };
 export default authOperations;
