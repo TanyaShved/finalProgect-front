@@ -5,7 +5,7 @@
   align-items: center;
   width: 320px;
   height: 70px;
-  border: 1px solid #e2e3e5;
+  background-color: var(--bg-color-primary);
 }
 
 .logo {
@@ -24,15 +24,11 @@
   align-items: center;
   justify-content: center;
   width: 56px;
-  height: 69px;
+  height: 68px;
   cursor: pointer;
   outline: none;
   border: none;
   background-color: var(--bg-color-primary);
-}
-
-.btnBurgerMenu {
-  border-left: 1px solid #e2e3e5;
 }
 
 .burgerMenuIcon {

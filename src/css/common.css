@@ -1,5 +1,5 @@
 :root {
-  --bg-color-primary: #e5e5e5;
+  --bg-color-primary: #f2f5f7;
   --bg-color-secondary: #02172a;
   --test-bg-color: #ffffff;
 
@@ -63,6 +63,8 @@ a {
 
 /* Container */
 .container {
+  width: 100vw;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;

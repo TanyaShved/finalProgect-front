@@ -18,12 +18,12 @@
   align-items: center;
   justify-content: center;
   width: 56px;
-  height: 69px;
+  height: 68px;
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: var(--bg-color-primary);
-  border-left: 1px solid #e2e3e5;
+  background-color: #f2f5f7;
+  /* border-left: 1px solid #e2e3e5; */
 }
 
 .closeIcon {
@@ -49,12 +49,13 @@
 
   .modalWrapper {
     flex-direction: column;
+    width: 320px;
     position: absolute;
-    top: 70px;
-    right: 0;
-    left: 0;
+    top: 71px;
+    left: calc(50% - 160px);
+    /* left: 50%; */
     bottom: 0;
-    background-color: var(--bg-color-primary);
+    background-color: #f2f5f7;
     z-index: 4;
   }
 
@@ -67,7 +68,7 @@
   .btnClose {
     position: absolute;
     z-index: 10;
-    top: -70px;
+    top: -69px;
     left: calc(50% + 103px);
   }
 }
