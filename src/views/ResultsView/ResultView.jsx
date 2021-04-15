@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { unsetResults } from '../../redux/tests/tests-slice';
 import { testsSelectors } from '../../redux/tests';
-import Container from '../../components/Container';
 import Diagramm from '../../components/Diagramm';
 import notBadCat from '../../images/not_bad_cat.png';
 import badCat from '../../images/bad_cat.png';
@@ -65,7 +64,7 @@ export default function ResultView() {
   };
 
   return (
-    <Container>
+    <>
       <h1 className={s.title}>Results</h1>
       <p className={s.subTitle}>{testName(testUrl)}</p>
       <span className={s.line}></span>
@@ -90,6 +89,6 @@ export default function ResultView() {
       <button className={s.button} type="button" onClick={tryAgain}>
         Try again
       </button>
-    </Container>
+    </>
   );
 }
