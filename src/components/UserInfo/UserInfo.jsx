@@ -8,7 +8,6 @@ import s from './UserInfo.module.css';
 export default function UserInfo() {
   const name = useSelector(authSelectors.getUsername);
 
-  //   const name = 'User1'; // Временная переменная
   const userAvatar = false; // Временная переменная
 
   return (
