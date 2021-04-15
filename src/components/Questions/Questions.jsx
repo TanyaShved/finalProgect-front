@@ -10,8 +10,10 @@ export default function Questions({ value, handleChange, answers }) {
               <input
                 className={s.radioBtn}
                 type="radio"
+                checked={value === answer}
                 name="answer"
                 value={answer}
+                onChange={handleChange}
               />
               <span className={s.icon}></span>
               <span className={s.label}>{answer}</span>
