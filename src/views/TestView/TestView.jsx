@@ -90,7 +90,11 @@ export default function TestView({ testTitle }) {
           type="button"
           disabled={quesNumb === 0}
           onClick={() => setQuesNumb(quesNumb - 1)}
-          className={quesNumb === 0 ? classes.prevBtnDis : classes.prevBtn}
+          className={
+            quesNumb === 0
+              ? `${classes.prevBtnDis} ${classes.prevBtn}`
+              : classes.prevBtn
+          }
         >
           <svg className={classes.leftArrow}>
             <use href={sprite + '#left-arrow'}></use>
@@ -103,7 +107,7 @@ export default function TestView({ testTitle }) {
           onClick={() => setQuesNumb(quesNumb + 1)}
           className={
             quesNumb === questions.length - 1
-              ? classes.nextBtnDis
+              ? `${classes.nextBtnDis} ${classes.nextBtn}`
               : classes.nextBtn
           }
         >
