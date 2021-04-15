@@ -1,0 +1,65 @@
+.ulField:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .ulField:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.field {
+  display: inline-flex;
+}
+
+.radioBtn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+
+  /* position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; */
+}
+
+.icon {
+  display: inline-block;
+  min-width: 18px;
+  height: 18px;
+  margin-right: 20px;
+  border: 1px solid var(--text-color-primary);
+  border-radius: 50%;
+}
+
+.icon::before {
+  content: '';
+  display: block;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: translate(3px, 3px);
+}
+
+.radioBtn:checked + .icon::before {
+  background-color: var(--text-color-third);
+}
+
+.label {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
