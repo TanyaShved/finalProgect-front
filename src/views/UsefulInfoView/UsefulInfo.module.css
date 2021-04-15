@@ -8,7 +8,7 @@
   background-color: var(--bg-color-primary);
   background-repeat: no-repeat;
   background-image: url('../../images/bg/bg-usefulinfo-320.jpg');
-  background-size: 310px auto;
+  background-size: 320px auto;
   background-position: top 0% right 50%;
 }
 
@@ -25,7 +25,7 @@
     min-height: 900px;
 
     background-image: url('../../images/bg/bg-usefulinfo-768.jpg');
-    background-size: 750px auto;
+    background-size: 768px auto;
     background-position: top 60% right 0%;
   }
 }
@@ -43,7 +43,7 @@
     min-height: 724px;
 
     background-image: url('../../images/bg/bg-usefulinfo-1280.jpg');
-    background-size: 1200px auto;
+    background-size: 1280px auto;
     background-position: top 0% right 0%;
   }
 }
