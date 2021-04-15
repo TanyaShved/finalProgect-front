@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import authSelectors from 'redux/auth/auth-selectors';
 
-const PublicRegisterRoute = ({
+const PublicRoute = ({
   children,
   restricted = false,
   redirectTo = '/login',
   ...routeProps
 }) => {
-  const isRegistered = useSelector(authSelectors.getIsRegistered);
-  const shouldRedirect = isRegistered && restricted;
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  const shouldRedirect = isLoggedIn && restricted;
 
   return (
     <Route {...routeProps}>
@@ -19,9 +19,9 @@ const PublicRegisterRoute = ({
   );
 };
 
-PublicRegisterRoute.propTypes = {
+PublicRoute.propTypes = {
   children: PropTypes.node.isRequired,
   redirectTo: PropTypes.string,
 };
 
-export default PublicRegisterRoute;
+export default PublicRoute;

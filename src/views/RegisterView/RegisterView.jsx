@@ -15,7 +15,15 @@ const RegisterView = () => {
             email: data['E-mail'],
             password: data['Password']
         }
-        dispatch(authOperations.register(newUser));
+         const getAutoLogin = async() => {
+            await dispatch(authOperations.register(newUser));
+            const currentUser = {
+                email: newUser.email,
+                password: newUser.password
+            }
+            dispatch(authOperations.logIn(currentUser))
+        }
+        getAutoLogin()
     };
 
     return (

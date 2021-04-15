@@ -39,15 +39,16 @@ const logIn = createAsyncThunk(
 );
 
 const logOut = createAsyncThunk(
-  "auth/logout",
+  'auth/logOut',
   async (_, { rejectWithValue }) => {
     try {
-      await axios.post('/auth/logout');
+      const { data } = axios.post('/auth/logout');
       token.unset();
-    } catch (error) {
-      return rejectWithValue(error);
+      return data;
+    } catch ({ response }) {
+      return rejectWithValue(response.status);
     }
-  }
+  },
 );
 
 const fetchCurrentUser = createAsyncThunk(

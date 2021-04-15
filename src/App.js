@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, useHistory, useLocation  } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,8 +7,7 @@ import authOperations from 'redux/auth/auth-operations';
 import authSelectors from 'redux/auth/auth-selectors';
 import Container from './components/Container';
 import Loader from './components/Loader';
-import PublicGeneralRoute from 'components/Routes/PublicGeneralRoute';
-import PublicRegisterRoute from 'components/Routes/PublicRegisterRoute';
+import PublicRoute from 'components/Routes/PublicRoute';
 import PrivateRoute from 'components/Routes/PrivateRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
@@ -43,18 +42,22 @@ const TestView = lazy(() =>
 );
 
 const App = () => {
+  const history = useHistory()
+  const location = useLocation()
+  const dispatch = useDispatch();
   const [testTitle, setTestTitle] = useState({
     firstPart: '[QA technical',
     secondPart: 'training_]',
   });
-  const dispatch = useDispatch();
+  const [currentUrl] = useState(() => location.pathname)
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser,
   );
 
   useEffect(() => {
+    history.push(currentUrl)
     dispatch(authOperations.fetchCurrentUser());
-  }, [dispatch]);
+  }, [currentUrl, dispatch, history]);
 
   return (
     <>
@@ -66,17 +69,17 @@ const App = () => {
 
           <Switch>
             <Suspense fallback={<Loader />}>
-              <PublicGeneralRoute path="/login" redirectTo="/" restricted>
+              <PublicRoute path="/login" redirectTo="/" restricted>
                 <Container>
                   <LoginView />
                 </Container>
-              </PublicGeneralRoute>
+              </PublicRoute>
 
-              <PublicRegisterRoute path="/register" restricted>
+              <PublicRoute path="/register" restricted>
                 <Container>
                   <RegisterView />
                 </Container>
-              </PublicRegisterRoute>
+              </PublicRoute>
 
               <PrivateRoute path="/" exact>
                 <Container>
@@ -96,11 +99,11 @@ const App = () => {
                 {/* </Container> */}
               </PrivateRoute>
 
-              <PublicGeneralRoute path="/contacts">
+              <PublicRoute path="/contacts">
                 <Container>
                   <ContactsPage />
                 </Container>
-              </PublicGeneralRoute>
+              </PublicRoute>
 
               <PrivateRoute path="/results">
                 <Container>
