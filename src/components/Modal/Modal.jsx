@@ -1,14 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
-import authOperations from 'redux/auth/auth-operations';
+import NavItem from '../NavItem';
 
 import sprite from '../../images/sprite.svg';
 
 import s from './Modal.module.css';
 
-export default function Modal({ modalActive, setActive, children }) {
-  const dispatch = useDispatch();
+export default function Modal({ routes, modalActive, setActive, children }) {
+  const routesLength = routes.length;
 
   return (
     <div
@@ -19,17 +18,13 @@ export default function Modal({ modalActive, setActive, children }) {
       }
     >
       <div className={s.modalWrapper}>
-        <ul className={s.menuWrapper}>{children}</ul>
+        <ul className={routesLength > 1 ? s.longMenu : s.shortMenu}>
+          {routes.map(({ name, path, id }) => (
+            <NavItem name={name} link={path} key={id} setActive={setActive} />
+          ))}
+        </ul>
 
-        <button
-          type="button"
-          className={s.btnLogOut}
-          onClick={() => dispatch(authOperations.logOut)}
-        >
-          <svg className={s.sign_out}>
-            <use href={sprite + '#sign-out'}></use>
-          </svg>
-        </button>
+        {children}
 
         <button className={s.btnClose} onClick={() => setActive(false)}>
           <svg className={s.closeIcon}>

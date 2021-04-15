@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import AuthMenu from '../AuthMenu/AuthMenu';
 import UserInfo from '../UserInfo';
 import Logo from '../Logo';
 import Modal from '../Modal';
-import NavItem from '../NavItem';
-import authSelectors from 'redux/auth/auth-selectors';
+
+import { authOperations, authSelectors } from '../../redux/auth';
+
+import routes from '../../routes.json';
 
 import sprite from '../../images/sprite.svg';
 
@@ -15,10 +16,9 @@ import s from './Navigation.module.css';
 
 export default function Navigation() {
   const isAuthenticated = useSelector(authSelectors.getIsLoggedIn);
+  const dispatch = useDispatch();
 
   const [modalActive, setModalActive] = useState();
-
-  // const isAuthenticated = true; // временная переменная
 
   return (
     <nav className={s.pageNavigation}>
@@ -42,39 +42,28 @@ export default function Navigation() {
         </button>
 
         {!isAuthenticated ? (
-          <div
-            className={
-              modalActive
-                ? s.navigationMenu + ' ' + s.navigationMenuActive
-                : s.navigationMenu
-            }
-          >
-            <AuthMenu setActive={setModalActive} />
-            <button
-              className={s.btnClose}
-              onClick={() => setModalActive(false)}
-            >
-              <svg className={s.closeIcon}>
-                <use href={sprite + '#close'}></use>
-              </svg>
-            </button>
-          </div>
+          <Modal
+            routes={[routes[2]]}
+            modalActive={modalActive}
+            setActive={setModalActive}
+          />
         ) : (
           <>
-            <Modal modalActive={modalActive} setActive={setModalActive}>
-              <NavItem name={'Home'} link={'/'} setActive={setModalActive} />
-              <NavItem
-                name={'Materials'}
-                link={'/useful-info'}
-                setActive={setModalActive}
-              />
-              <NavItem
-                name={'Contacts'}
-                link={'/contacts'}
-                setActive={setModalActive}
-              />
+            <Modal
+              routes={routes}
+              modalActive={modalActive}
+              setActive={setModalActive}
+            >
+              <button
+                type="button"
+                className={s.btnLogOut}
+                onClick={() => dispatch(authOperations.onLogout)}
+              >
+                <svg className={s.sign_out}>
+                  <use href={sprite + '#sign-out'}></use>
+                </svg>
+              </button>
             </Modal>
-
             <UserInfo />
           </>
         )}

@@ -3,7 +3,8 @@
   align-items: center;
 }
 
-.menuWrapper {
+.longMenu,
+.shortMenu {
   display: flex;
   align-items: center;
   list-style: none;
@@ -12,8 +13,7 @@
   text-decoration: none;
 }
 
-.btnClose,
-.btnLogOut {
+.btnClose {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,18 +23,7 @@
   outline: none;
   border: none;
   background-color: var(--bg-color-primary);
-}
-
-.btnClose {
   border-left: 1px solid #e2e3e5;
-}
-
-.btnClose {
-  position: absolute;
-  z-index: 10;
-  top: -70px;
-  left: calc(50% + 103px);
-  background-color: var(--bg-color-primary);
 }
 
 .closeIcon {
@@ -43,16 +32,11 @@
   height: 26px;
 }
 
-.sign_out {
-  width: 16px;
-  height: 16px;
-}
-
 @media screen and (max-width: 767px) {
   .navigationMenu {
     margin: 0 auto;
     opacity: 0;
-    visibility: 0;
+    visibility: hidden;
     transition: opacity 200ms linear;
     pointer-events: none;
   }
@@ -74,9 +58,17 @@
     z-index: 4;
   }
 
-  .menuWrapper {
+  .longMenu,
+  .shortMenu {
     flex-direction: column;
     text-align: center;
+  }
+
+  .btnClose {
+    position: absolute;
+    z-index: 10;
+    top: -70px;
+    left: calc(50% + 103px);
   }
 }
 
@@ -89,9 +81,14 @@
     justify-content: space-between;
   }
 
-  .menuWrapper {
+  .longMenu {
     justify-content: space-between;
     width: 310px;
+  }
+
+  .shortMenu {
+    justify-content: flex-end;
+    width: 480px;
   }
 
   .btnClose {
@@ -108,7 +105,12 @@
     width: 640px;
   }
 
-  .menuWrapper {
+  .longMenu {
     width: 380px;
+  }
+
+  .shortMenu {
+    justify-content: flex-end;
+    width: 620px;
   }
 }

@@ -19,7 +19,6 @@
 }
 
 .btnBurgerMenu,
-.btnClose,
 .btnLogOut {
   display: flex;
   align-items: center;
@@ -32,16 +31,8 @@
   background-color: var(--bg-color-primary);
 }
 
-.btnBurgerMenu,
-.btnClose {
+.btnBurgerMenu {
   border-left: 1px solid #e2e3e5;
-}
-
-.btnClose {
-  position: absolute;
-  z-index: 10;
-  left: calc(50% + 102px);
-  background-color: var(--bg-color-primary);
 }
 
 .burgerMenuIcon {
@@ -50,30 +41,9 @@
   height: 20px;
 }
 
-.closeIcon {
-  display: block;
-  width: 26px;
-  height: 26px;
-}
-
 .sign_out {
   width: 16px;
   height: 16px;
-}
-
-@media screen and (max-width: 767px) {
-  .navigationMenu {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 200ms linear;
-    pointer-events: none;
-  }
-
-  .navigationMenuActive {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -81,22 +51,13 @@
     width: 768px;
   }
 
-  .btnBurgerMenu,
-  .btnClose {
+  .btnBurgerMenu {
     display: none;
-  }
-
-  .modalWrapper {
-    width: 500px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .pageNavigation {
     width: 1280px;
-  }
-
-  .modalWrapper {
-    width: 640px;
   }
 }
