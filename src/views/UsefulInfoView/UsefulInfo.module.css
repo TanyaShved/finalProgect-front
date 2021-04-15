@@ -7,9 +7,16 @@
 
   background-color: var(--bg-color-primary);
   background-repeat: no-repeat;
-  background-image: url('../../images/bg-usefulinfo-320.jpg');
+  background-image: url('../../images/bg/bg-usefulinfo-320.jpg');
   background-size: 310px auto;
   background-position: top 0% right 50%;
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi),
+  (max-width: 767px) and (min-resolution: 2dppx) {
+  .section {
+    background-image: url('../../images/bg/bg-usefulinfo-320@2x.jpg');
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -17,9 +24,16 @@
     width: 768px;
     min-height: 900px;
 
-    background-image: url('../../images/bg-usefulinfo-768.jpg');
+    background-image: url('../../images/bg/bg-usefulinfo-768.jpg');
     background-size: 750px auto;
     background-position: top 60% right 0%;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi),
+  (min-width: 768px) and (min-resolution: 2dppx) {
+  .section {
+    background-image: url('../../images/bg/bg-usefulinfo-768@2x.jpg');
   }
 }
 
@@ -28,9 +42,16 @@
     width: 1280px;
     min-height: 724px;
 
-    background-image: url('../../images/bg-usefulinfo-1280.jpg');
+    background-image: url('../../images/bg/bg-usefulinfo-1280.jpg');
     background-size: 1200px auto;
     background-position: top 0% right 0%;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi),
+  (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section {
+    background-image: url('../../images/bg/bg-usefulinfo-1280@2x.jpg');
   }
 }
 
