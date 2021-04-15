@@ -24,6 +24,11 @@ const RegisterView = lazy(() =>
     './views/RegisterView/RegisterView.jsx' /* webpackChunkName: "register-view" */
   ),
 );
+const GoogleView = lazy(() =>
+  import(
+    './views/GoogleView/GoogleView.jsx' /* webpackChunkName: "google-view" */
+  ),
+);
 const MainPage = lazy(() =>
   import(
     '../src/views/HomeViev/MainPage.jsx' /* webpackChunkName: "main-page" */
@@ -55,6 +60,12 @@ const App = () => {
   );
 
   useEffect(() => {
+    const params = new URL(document.location).searchParams;
+    const token = params.get('token');
+    window.localStorage.setItem('token', JSON.stringify(token));
+  }, [])
+
+  useEffect(() => {
     history.push(currentUrl)
     dispatch(authOperations.fetchCurrentUser());
   }, [currentUrl, dispatch, history]);
@@ -69,6 +80,12 @@ const App = () => {
 
           <Switch>
             <Suspense fallback={<Loader />}>
+              <PublicRoute path="/auth/google" restricted>
+                <Container>
+                  <GoogleView />
+                </Container>
+              </PublicRoute>
+                
               <PublicRoute path="/login" redirectTo="/" restricted>
                 <Container>
                   <LoginView />
