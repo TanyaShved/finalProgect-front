@@ -6,6 +6,8 @@ const getUsername = state => state.auth.user.name;
 
 const getUserEmail = state => state.auth.user.email;
 
+const getUserAvatar = state => state.auth.user.avatarURL;
+
 const getIsFetchingCurrentUser = state => state.auth.isFetchingCurrentUser;
 
 const getIsLoading = state => state.auth.isLoading;
@@ -17,6 +19,7 @@ const authSelectors = {
   getIsLoggedIn,
   getUsername,
   getUserEmail,
+  getUserAvatar,
   getIsFetchingCurrentUser,
   getIsLoading,
   getError,

@@ -13,6 +13,7 @@ const initialState = {
   user: {
     name: null,
     email: null,
+    avatarURL: null
   },
   token: null,
   isLoggedIn: false,
@@ -59,6 +60,7 @@ const authSlice = createSlice({
     [logIn.fulfilled](state, { payload }) {
       state.user.name = payload.data.name;
       state.user.email = payload.data.email;
+      state.user.avatarURL = payload.data.avatarURL;
       state.token = payload.data.token;
       state.isLoggedIn = true;
       state.isLoading = false;
