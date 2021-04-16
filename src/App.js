@@ -12,7 +12,7 @@ import PrivateRoute from 'components/Routes/PrivateRoute';
 import AppBar from './components/AppBar';
 import Footer from './components/Footer';
 import UsefulInfoView from './views/UsefulInfoView'; //Уточнить, почему делали не через динамические импорты
-// import NotFoundView from './views/NotFoundView'; //Уточнить, почему делали не через динамические импорты
+import NotFoundView from './views/NotFoundView'; //Уточнить, почему делали не через динамические импорты
 
 const LoginView = lazy(() =>
   import(
@@ -74,8 +74,8 @@ const App = () => {
         <>
           <AppBar />
 
-          <Switch>
-            <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader />}>
+            <Switch>
               <PublicRoute path="/auth/google" restricted>
                 <Container>
                   <GoogleView />
@@ -124,11 +124,11 @@ const App = () => {
                 </Container>
               </PrivateRoute>
 
-              {/* <Container>
-                  <Route component={NotFoundView} />
-                </Container> */}
-            </Suspense>
-          </Switch>
+              <Container>
+                <PublicRoute component={NotFoundView} />
+              </Container>
+            </Switch>
+          </Suspense>
           <Footer />
         </>
       )}
