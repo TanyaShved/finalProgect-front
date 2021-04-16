@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import s from './GoogleView.module.css';
 import authOperations from 'redux/auth/auth-operations';
 import authSelectors from 'redux/auth/auth-selectors';
 import Loader from 'components/Loader';
@@ -30,10 +29,7 @@ const GoogleView = () => {
     }, [dispatch, googleCredentials.email, googleCredentials.name])
     
     return (
-        <div className={s.container}>
-            <Loader/>
-        </div>
-        
+        <Loader/>
     )
 }
 

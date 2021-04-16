@@ -71,7 +71,7 @@ const App = () => {
       {isFetchingCurrentUser ? (
         <Loader />
       ) : (
-        <>
+          <>
           <AppBar />
 
           <Suspense fallback={<Loader />}>
@@ -125,15 +125,18 @@ const App = () => {
               </PrivateRoute>
 
               <Container>
-                <PublicRoute component={NotFoundView} />
+                <PublicRoute>
+                  <NotFoundView/>
+                </PublicRoute>
               </Container>
-            </Switch>
+              </Switch>
+              <Footer />
           </Suspense>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
       <ToastContainer />
-    </>
+    </>    
   );
 };
 export default App;

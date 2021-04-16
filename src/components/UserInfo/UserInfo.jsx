@@ -6,7 +6,7 @@ import authSelectors from 'redux/auth/auth-selectors';
 import s from './UserInfo.module.css';
 
 export default function UserInfo() {
-  const name = useSelector(authSelectors.getUsername).split(' ');
+  const name = useSelector(authSelectors.getUsername)?.split(' ');
   const avatar = useSelector(authSelectors.getUserAvatar);
 
   return (
