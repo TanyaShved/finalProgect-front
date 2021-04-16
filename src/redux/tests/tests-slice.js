@@ -8,6 +8,7 @@ const initialState = {
   results: [],
   testUrl: '',
   statistics: [],
+  quesNumb: 0,
 };
 
 const testsSlice = createSlice({
@@ -29,6 +30,10 @@ const testsSlice = createSlice({
 
     setTestUrl(state, { payload }) {
       state.testUrl = payload;
+    },
+
+    setQuesNumb(state, { payload }) {
+      state.quesNumb = payload;
     },
 
     unsetTests(state) {
@@ -58,5 +63,6 @@ export const {
   unsetTests,
   unsetResults,
   setTestUrl,
+  setQuesNumb,
 } = testsSlice.actions;
 export default testsSlice.reducer;

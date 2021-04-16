@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import { testsSelectors } from '../../redux/tests';
-import { addResult } from '../../redux/tests/tests-slice';
+import { addResult, setQuesNumb } from '../../redux/tests/tests-slice';
 import { testsOperations } from '../../redux/tests';
 import styles from './TestView.module.css';
 import Questions from '../../components/Questions';
@@ -11,18 +11,35 @@ import Loader from '../../components/Loader';
 import classes from './TestView.module.css';
 import sprite from '../../images/sprite.svg';
 
-export default function TestView({ testTitle }) {
+export default function TestView() {
   const history = useHistory();
   const dispatch = useDispatch();
   const questions = useSelector(testsSelectors.getQuestions);
   const results = useSelector(testsSelectors.getResults);
   const testUrl = useSelector(testsSelectors.getTestUrl);
+  const quesNumb = useSelector(testsSelectors.getQuesNumb);
   const [value, setValue] = useState('');
-  const [quesNumb, setQuesNumb] = useState(0);
+  // const [quesNumb, setQuesNumb] = useState(0);
   const question = questions[quesNumb]?.question;
   const answers = questions[quesNumb]?.answers;
   const questionId = questions[quesNumb]?.questionId;
   const disabled = results.length !== questions.length;
+
+  function testName(testUrl) {
+    if (testUrl === 'theory') {
+      return (
+        <h1 className={styles.testTitle}>
+          [Testing <br></br> theory_]
+        </h1>
+      );
+    } else if (testUrl === 'tech') {
+      return (
+        <h1 className={styles.testTitle}>
+          [QA technical <br></br> training_]
+        </h1>
+      );
+    }
+  }
 
   useEffect(() => {
     const answer = results.find(result => result.questionId === questionId)
@@ -53,15 +70,18 @@ export default function TestView({ testTitle }) {
   return (
     <div className={styles.container}>
       <div className={styles.testHeader}>
-        <h1 className={styles.testTitle}>
-          {testTitle.firstPart} <br></br> {testTitle.secondPart}
-        </h1>
+        {testName(testUrl)}
         <button
           type="button"
           disabled={results.length !== questions.length}
-          className={disabled ? styles.finishTestBtnDis : styles.finishTestBtn}
+          className={
+            disabled
+              ? `${styles.finishTestBtn} ${styles.finishTestBtnDis}`
+              : styles.finishTestBtn
+          }
           onClick={() => {
             dispatch(testsOperations.postAnswers({ testUrl, results }));
+            dispatch(setQuesNumb(0));
             history.push('/results');
           }}
         >
@@ -89,7 +109,7 @@ export default function TestView({ testTitle }) {
         <button
           type="button"
           disabled={quesNumb === 0}
-          onClick={() => setQuesNumb(quesNumb - 1)}
+          onClick={() => dispatch(setQuesNumb(quesNumb - 1))}
           className={
             quesNumb === 0
               ? `${classes.prevBtnDis} ${classes.prevBtn}`
@@ -104,7 +124,7 @@ export default function TestView({ testTitle }) {
         <button
           type="button"
           disabled={quesNumb === questions.length - 1}
-          onClick={() => setQuesNumb(quesNumb + 1)}
+          onClick={() => dispatch(setQuesNumb(quesNumb + 1))}
           className={
             quesNumb === questions.length - 1
               ? `${classes.nextBtnDis} ${classes.nextBtn}`
