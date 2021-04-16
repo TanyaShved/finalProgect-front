@@ -23,7 +23,6 @@
   outline: none;
   border: none;
   background-color: #f2f5f7;
-  /* border-left: 1px solid #e2e3e5; */
 }
 
 .closeIcon {
@@ -53,7 +52,6 @@
     position: absolute;
     top: 71px;
     left: calc(50% - 160px);
-    /* left: 50%; */
     bottom: 0;
     background-color: #f2f5f7;
     z-index: 4;
