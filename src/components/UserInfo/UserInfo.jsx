@@ -7,6 +7,7 @@ import s from './UserInfo.module.css';
 
 export default function UserInfo() {
   const name = useSelector(authSelectors.getUsername);
+  const avatar = useSelector(authSelectors.getUserAvatar);
 
   const userAvatar = false; // Временная переменная
 
@@ -21,7 +22,10 @@ export default function UserInfo() {
           className={s.userAvatar}
         />
       ) : (
-        <span className={s.userAvatar}>{name ? name[0] : 'U'}</span> // Ломалось при первой загрузке страницы
+        // <span className={s.userAvatar}>{name ? name[0] : 'U'}</span> 
+          <div className={s.containerUserAvatar}>
+            <img className={s.userAvatar} src={avatar} alt={name}/>
+          </div> 
       )}
 
       <span className={s.userName}>{name ? name : 'User'}</span>
