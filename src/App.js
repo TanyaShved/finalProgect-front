@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
-import { Switch, useHistory, useLocation  } from 'react-router-dom';
+import { Switch, useHistory, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,14 +47,10 @@ const TestView = lazy(() =>
 );
 
 const App = () => {
-  const history = useHistory()
-  const location = useLocation()
+  const history = useHistory();
+  const location = useLocation();
   const dispatch = useDispatch();
-  const [testTitle, setTestTitle] = useState({
-    firstPart: '[QA technical',
-    secondPart: 'training_]',
-  });
-  const [currentUrl] = useState(() => location.pathname)
+  const [currentUrl] = useState(() => location.pathname);
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser,
   );
@@ -63,10 +59,10 @@ const App = () => {
     const params = new URL(document.location).searchParams;
     const token = params.get('token');
     window.localStorage.setItem('token', JSON.stringify(token));
-  }, [])
+  }, []);
 
   useEffect(() => {
-    history.push(currentUrl)
+    history.push(currentUrl);
     dispatch(authOperations.fetchCurrentUser());
   }, [currentUrl, dispatch, history]);
 
@@ -85,7 +81,7 @@ const App = () => {
                   <GoogleView />
                 </Container>
               </PublicRoute>
-                
+
               <PublicRoute path="/login" redirectTo="/" restricted>
                 <Container>
                   <LoginView />
@@ -100,13 +96,13 @@ const App = () => {
 
               <PrivateRoute path="/" exact>
                 <Container>
-                  <MainPage setTestTitle={setTestTitle} />
+                  <MainPage />
                 </Container>
               </PrivateRoute>
 
               <PrivateRoute path="/test">
                 <Container>
-                  <TestView testTitle={testTitle} />
+                  <TestView />
                 </Container>
               </PrivateRoute>
 

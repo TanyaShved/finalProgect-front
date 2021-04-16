@@ -5,13 +5,14 @@ import {
   setTestUrl,
   unsetTests,
   unsetResults,
+  setQuesNumb,
 } from '../../redux/tests/tests-slice';
 
 import '../../css/common.css';
 import style from './MainPage.module.css';
 import sprite from '../../images/sprite.svg';
 
-function MainPage({ setTestTitle }) {
+function MainPage() {
   const dispatch = useDispatch();
 
   return (
@@ -32,13 +33,10 @@ function MainPage({ setTestTitle }) {
             to="/test"
             className={style.button + ' ' + style.first}
             onClick={() => {
-              setTestTitle({
-                firstPart: '[QA technical',
-                secondPart: 'training_]',
-              });
               dispatch(setTestUrl('tech'));
               dispatch(unsetTests());
               dispatch(unsetResults());
+              dispatch(setQuesNumb(0));
             }}
           >
             QA technical
@@ -53,13 +51,10 @@ function MainPage({ setTestTitle }) {
             to="/test"
             className={style.button + ' ' + style.second}
             onClick={() => {
-              setTestTitle({
-                firstPart: '[Testing',
-                secondPart: 'theory_]',
-              });
               dispatch(setTestUrl('theory'));
               dispatch(unsetTests());
               dispatch(unsetResults());
+              dispatch(setQuesNumb(0));
             }}
           >
             Testing
